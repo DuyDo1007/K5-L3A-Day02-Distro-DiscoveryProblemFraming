@@ -127,3 +127,106 @@ Quy trình nháp hiện tại:
 | Card #3: chỉ suýt lỡ 1 lần/tháng, tần suất thấp, chưa chắc đủ đau để ưu tiên | Đồng ý | Xếp card #3 xuống rank 3, ghi rõ điểm yếu về tần suất |
 
 ---
+## 4. Tôi đã tham gia phần nào (CP3 → CP7)
+
+| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
+|---|---|---|
+| Pitch Problem Card | Pitch 3 card: #1 đọc 5 file đề lab (15–30 phút/lab), #2 hẹn giờ làm việc nhóm (nửa ngày), #3 deadline rải rác ở 3 nơi | 3 card vào bảng pitch (mục 2.1, dòng #1–#3); card #3 vào shortlist 3 candidate |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: cho card #7 của Dương: "Một năm bạn ký mấy hợp đồng thuê trọ? Nếu chỉ 1–2 lần thì giảm 30% thời gian đọc tiết kiệm được bao nhiêu? Hay pain thật là tiền cọc bị mất?"; tương tự cho #8 (công cụ transcript có sẵn đã giải chưa) và #9 (30–45 phút mất vào bước tính hay bước nhắc tiền) | Cả 3 card của Dương không vào shortlist; nhóm ghi nhận #7 tần suất thấp, #9 đã có phương án Rule (bảng tính, Splitwise) |
+| Nhận phản biện | Câu hỏi tôi nhận được (Duy): card #1 "checklist mẫu dùng lại có đủ không?"; card #2 "có xảy ra liên tục không hay chỉ một lần?"; card #3 "vấn đề do nhiều nền tảng hay do chưa có công cụ lưu deadline?" | Tôi đã sửa gì: thừa nhận card #2 mới có 1 lần đo nên chưa đủ bằng chứng, không đề xuất vào shortlist; với card #3, đồng ý pain chủ yếu do chưa có một chỗ lưu chung → nhóm loại #3 vì có phương án Rule (một lịch chung + nhắc hạn), dùng làm phương án đối chứng |
+| Gom cluster / cây OST | Tham gia thảo luận xếp card của mình vào cluster A (#1) và B (#2, #3) | Cluster B (điều phối công việc và deadline) trở thành outcome của cây OST |
+| Chọn candidate problem | Đồng ý chọn #12 vì khớp outcome điều phối nhóm và có số đo cụ thể hơn #3 của tôi | Nhóm chốt #12 |
+| Kiểm chứng / research | Không phụ trách (Cường làm) | — |
+| Quy trình nhóm | Phụ trách CP5: vẽ quy trình hiện tại 5 bước (bottleneck: mở từng bản nháp ~30'), quy trình tương lai 6 bước (Rule / AI / HITL, boundary, phương án quay về), bảng before/after | Mục 4.1–4.3 trong `group_report.md`; tách riêng ~45' chờ phản hồi để không tính vào lợi ích của AI |
+| Problem Statement | Viết Problem Statement v0 và ghi 5 điểm phản biện | Mục 5; các phản biện (metric chỉ đo tốc độ, boundary chưa nói AI không được làm gì…) dẫn tới thay đổi ở v1 |
+| Mức can thiệp AI | Không phụ trách chính (Duy, Dương); đọc lại để đảm bảo quy trình tương lai khớp mức Workflow | Quy trình tương lai mục 4.2 khớp với bảng 4 mức ở mục 6.2 |
+| Quyết định | Không phụ trách chính (Dương) | Quyết định Not Yet; ngưỡng dừng "trên 20% task thiếu dữ liệu" khớp với bước Rule kiểm tra mẫu ở quy trình tương lai |
+
+---
+
+## 5. Dùng AI
+
+| Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
+|---|---|---|---|---|
+| CP1 Scan | Nhờ Claude gợi ý 10 problem theo 4 lăng kính | Gợi ý đủ 4 lăng kính, viết sẵn dạng Job Story | Nhiều ý chung chung cho học viên, không gắn với trải nghiệm của tôi và không có số đo | Chỉ giữ 5 ý tôi có số đo thật, bỏ 5 ý còn lại |
+| CP2 Problem Card | Nhờ Claude viết Problem Card, quy trình nháp và đóng vai "PM hoài nghi" phản biện | Chỉ ra "nửa ngày" ở card #2 là thời gian chờ chứ không phải thời gian làm việc | Thời gian từng bước trong quy trình là ước tính chia từ tổng thời gian, chưa phải số bấm giờ từng bước | Giữ tổng thời gian theo số thật của tôi; đổi metric card #1 sang đo trên 3 lab tiếp theo |
+| CP3 Phản biện | Nhờ Claude phân tích báo cáo của Dương để tìm điểm yếu trước khi đặt câu hỏi | Chỉ ra số liệu không khớp giữa bảng scan và card, và card #9 đã có giải pháp sẵn | Gợi ý nhiều điểm hơn mức cần cho buổi pitch | Chỉ chọn mỗi card 1 câu hỏi và tự nói lại khi pitch |
+| CP4 Research | Không dùng (Cường phụ trách) | — | — | — |
+| CP5 Quy trình | Nhờ Claude dựng quy trình trước/sau từ số liệu của Cường và chuyển sang Mermaid | Tách được thời gian chờ (~45') khỏi thời gian thao tác, làm bottleneck rõ hơn | Chỉ có 2 bước có số liệu thật (chờ ~45', mở bản nháp ~30'); các bước còn lại AI chia từ tổng 110 phút | Ghi rõ trong báo cáo các bước nào là ước tính, cần Cường bấm giờ lại |
+| CP5–6 Problem Statement | Nhờ Claude chỉ ra lỗ hổng của Problem Statement v0 | Chỉ ra metric v0 chỉ đo tốc độ và boundary chưa nói AI không được làm gì | Phát hiện bảng thay đổi v0→v1 ghi thêm "độ chính xác tóm tắt" nhưng dòng metric v1 chưa có | Giữ v0 khớp với bảng thay đổi nhóm đã viết; báo nhóm sửa dòng metric v1 |
+| CP6 Mức can thiệp / quyết định | Không tham gia trực tiếp | — | — | — |
+
+---
+## 6. Reflection (CP7)
+
+### 6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?
+
+Qua việc nghe các thành viên trình bày top 3 problems, tôi nhận ra rằng không phải vấn đề nào gây khó chịu cũng đáng để xây dựng một sản phẩm giải quyết. Một vấn đề cần được đánh giá dựa trên tần suất xảy ra, mức độ ảnh hưởng và bằng chứng thực tế, thay vì chỉ dựa vào cảm nhận cá nhân.
+
+Ví dụ, khi phản biện vấn đề đọc hợp đồng thuê trọ của bạn Dương, tôi đặt câu hỏi rằng một năm người dùng thực sự ký bao nhiêu hợp đồng. Nếu chỉ ký 1–2 lần thì việc giảm 30% thời gian đọc hợp đồng chưa chắc tạo ra giá trị lớn. Thay vào đó, rủi ro mất tiền cọc có thể mới là vấn đề đáng quan tâm hơn.
+
+Tôi cũng học được rằng cần kiểm tra xem vấn đề đã có giải pháp đơn giản nào chưa. Không phải vấn đề nào cũng cần AI, đôi khi một bảng tính hoặc quy trình rõ ràng đã có thể giải quyết được.
+
+### 6.2. Nhóm có lúc nào bị "solution-first" không? Lúc đó nhóm nhận ra và xử lý thế nào?
+
+Trong quá trình thảo luận, tôi nhận thấy nguy cơ solution-first xuất hiện khi chúng tôi bắt đầu nghĩ đến việc sử dụng AI để giải quyết vấn đề trước khi xác định rõ nguyên nhân.
+
+Ví dụ, với vấn đề đọc nhiều file hướng dẫn lab của tôi, ý tưởng ban đầu là sử dụng AI để đọc tài liệu và tự động tạo checklist. Tuy nhiên, sau khi được phản biện, tôi nhận ra rằng nếu các repo lab có cấu trúc tương tự nhau thì một checklist mẫu có thể đã đủ.
+
+Tương tự, vấn đề deadline nằm rải rác ở nhiều nền tảng ban đầu có thể khiến chúng tôi nghĩ đến công cụ tự động tổng hợp thông báo. Nhưng nguyên nhân thực tế có thể chỉ là người học chưa có một nơi lưu deadline thống nhất.
+
+Từ đó, tôi hiểu rằng cần xác định rõ bottleneck và thử phương án không dùng AI trước khi quyết định mức can thiệp công nghệ.
+
+### 6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.
+
+Có. Một lần khiến tôi thay đổi suy nghĩ là khi bạn Duy phản biện Problem Card #3 về việc theo dõi deadline ở nhiều nền tảng.
+
+Ban đầu, tôi cho rằng việc phải kiểm tra LMS, email và group chat là một vấn đề phù hợp để phát triển công cụ tổng hợp deadline. Tuy nhiên, Duy đặt câu hỏi liệu nguyên nhân thực sự nằm ở việc sử dụng nhiều nền tảng hay do tôi chưa có công cụ lưu deadline tập trung.
+
+Sau khi suy nghĩ lại, tôi nhận thấy mình hoàn toàn có thể sử dụng Google Calendar và đặt nhắc nhở trước hạn nộp. Đây là giải pháp đơn giản, dễ thực hiện và chưa cần AI.
+
+Vì vậy, tôi đồng ý không đưa vấn đề này vào shortlist cuối cùng. Qua lần phản biện đó, tôi học được rằng việc bảo vệ ý tưởng ban đầu không quan trọng bằng việc tìm đúng nguyên nhân của vấn đề.
+
+### 6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?
+
+Trong nhóm, tôi không trực tiếp phụ trách CP4 mà bạn Cường thực hiện phần kiểm chứng. Vì vậy, tôi chủ yếu tiếp cận kết quả thông qua quá trình nhóm tổng hợp và xây dựng quy trình ở CP5.
+
+Điều khiến tôi chú ý là cần phân biệt thời gian thực hiện thao tác với thời gian chờ. Trong dữ liệu được sử dụng để xây dựng quy trình, có khoảng 45 phút chờ phản hồi và khoảng 30 phút mở, đối chiếu từng bản nháp.
+
+Ban đầu, nếu chỉ nhìn tổng thời gian hoàn thành công việc, tôi có thể cho rằng toàn bộ thời gian đều có khả năng được rút ngắn bằng AI. Tuy nhiên, thời gian chờ phản hồi còn phụ thuộc vào con người, nên không thể tự động tính toàn bộ phần đó thành lợi ích của AI.
+
+Tôi nhận ra rằng khi phân tích kết quả kiểm chứng, cần xác định chính xác bước nào gây chậm và bước nào có thể cải thiện bằng giải pháp đề xuất.
+
+*[Cần bổ sung sau khi đối chiếu CP4: một phát hiện cụ thể từ phỏng vấn hoặc research của Cường khiến bạn bất ngờ, nếu có.]*
+
+### 6.5. Điều khó nhất khi viết Problem Statement là gì?
+
+Đối với tôi, khó khăn lớn nhất khi viết Problem Statement là diễn đạt vấn đề đủ cụ thể, có thể đo lường được nhưng không vô tình đưa giải pháp vào ngay từ đầu.
+
+Khi viết phiên bản v0, tôi chủ yếu tập trung vào việc giảm thời gian hoàn thành quy trình. Tuy nhiên, sau khi nhờ AI phản biện, tôi nhận ra rằng chỉ đo tốc độ là chưa đủ. Một quy trình có thể nhanh hơn nhưng nếu kết quả tổng hợp sai hoặc thiếu thông tin thì vẫn không đáp ứng nhu cầu người dùng.
+
+Ngoài ra, việc xác định boundary cũng khó vì cần làm rõ AI được phép hỗ trợ đến đâu, những hành động nào phải có người kiểm tra và khi nào cần quay lại quy trình thủ công.
+
+Tôi học được rằng Problem Statement không chỉ mô tả một khó khăn mà còn phải xác định đối tượng, bối cảnh, tác động, tiêu chí thành công và giới hạn của giải pháp.
+
+### 6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?
+
+Nếu được làm lại, tôi sẽ dành nhiều thời gian hơn để thu thập bằng chứng trước khi lựa chọn vấn đề. Chẳng hạn, với Problem Card #1, tôi mới có số liệu 15–30 phút từ trải nghiệm cá nhân. Tôi muốn đo thêm ở ba buổi lab tiếp theo và hỏi các thành viên khác để xác định đây có thực sự là vấn đề lặp lại hay chỉ xuất hiện khi chưa quen cấu trúc tài liệu.
+
+Tôi cũng sẽ phản biện nhóm mạnh hơn về chất lượng dữ liệu và cách tính lợi ích. Khi xây dựng quy trình CP5, chỉ một số bước có số liệu cụ thể, các bước còn lại vẫn là ước tính. Tôi sẽ đề xuất đo lại từng bước thay vì sử dụng các con số chưa kiểm chứng để đưa ra kết luận.
+
+Ngoài ra, tôi sẽ yêu cầu nhóm so sánh phương án AI với giải pháp Rule hoặc Workflow đơn giản trước khi quyết định triển khai.
+
+Điều quan trọng nhất tôi rút ra là cần sẵn sàng thay đổi hoặc loại bỏ ý tưởng nếu bằng chứng chưa đủ thuyết phục.
+
+### 6.7. Hiểu bài: Chuỗi problem → quy trình → metric → boundary → mức can thiệp AI → quyết định
+
+Nhóm Distro lựa chọn problem #12 liên quan đến việc điều phối và tổng hợp công việc nhóm, trong đó quá trình kiểm tra các bản nháp và chờ phản hồi làm kéo dài thời gian hoàn thành. Từ vấn đề này, nhóm phân tích quy trình hiện tại để xác định bottleneck, đặc biệt là bước mở từng bản nháp mất khoảng 30 phút và thời gian chờ phản hồi khoảng 45 phút. Tiếp theo, nhóm xây dựng metric để đánh giá khả năng rút ngắn thời gian xử lý nhưng vẫn cần bảo đảm chất lượng kết quả tổng hợp. Về boundary, AI chỉ nên hỗ trợ xử lý và tổng hợp thông tin, còn những nội dung cần xác nhận hoặc quyết định cuối cùng phải do con người kiểm tra. Nhóm định hướng mức can thiệp Workflow, kết hợp Rule để kiểm tra dữ liệu đầu vào, AI để hỗ trợ tổng hợp và Human-in-the-loop để xác nhận kết quả. Nếu dữ liệu thiếu hoặc không đạt điều kiện, quy trình phải có phương án quay về xử lý thủ công. Cuối cùng, nhóm đưa ra quyết định **Not Yet** vì cần tiếp tục kiểm chứng dữ liệu và các giả định trước khi triển khai giải pháp AI.
+
+## 7. Tài liệu tham khảo
+
+- Tài liệu lab: [docs/01-worksheet.md](../../docs/01-worksheet.md), [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md), [RUBRIC.md](../../RUBRIC.md)
+- Rob Fitzpatrick, *The Mom Test* (dùng khi đặt câu hỏi phản biện về hành vi đã xảy ra)
+- Anthropic, [Building effective agents](https://www.anthropic.com/research/building-effective-agents) (phân biệt Workflow và Agent)
+- Báo cáo nhóm Distro: [report/team/group_report.md](../team/group_report.md)
+
