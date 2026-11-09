@@ -235,37 +235,33 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:độ mơ hồ trung bình–cao và độ phức tạp trung bình.
+Bài của nhóm nằm ở ô độ mơ hồ trung bình–cao và độ phức tạp trung bình.
 
-Vì sao:Candidate #12 là: “Khi gần đến hạn milestone/báo cáo đồ án, trưởng nhóm muốn nắm được tiến độ thực tế và phần còn thiếu của từng thành viên để điều phối việc hoàn thiện kịp thời”.
-Khía cạnh “tiến độ thực tế” không có một định nghĩa duy nhất: mỗi thành viên có cách cập nhật, mức độ phản hồi, và mức độ “đã hoàn thành” khác nhau; do đó, AI cần phải suy luận từ nhiều nguồn chứ không chỉ đọc một bảng duy nhất.
-Tuy nhiên, quy trình vẫn có cấu trúc rõ: task, deadline, trạng thái, blocker, phần còn thiếu. Điều này đủ để xây một workflow có input cố định, thay vì để AI tự hành động như một agent.
+Lý do: “tiến độ thực tế” chưa thể xác định chắc chắn chỉ từ trạng thái tự báo hoặc số commit; cách cập nhật và mức độ đầy đủ của bằng chứng còn khác nhau. CP4 cũng chưa chứng minh rằng có thể tự động truy cập đủ các nguồn hoặc suy ra mức hoàn thành đáng tin cậy. Vì vậy, quy trình CP5 giới hạn đầu vào ở mẫu cập nhật có cấu trúc và liên kết sản phẩm do thành viên cung cấp. Task, deadline, trạng thái, blocker và link là các trường có thể chuẩn hóa; trường thiếu được báo “chưa đủ dữ liệu”. Phần diễn giải nội dung còn mơ hồ mới là ứng viên để thử AI, dưới sự kiểm tra của trưởng nhóm.
 
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | Một template cập nhật tiến độ theo nhóm: mỗi người điền status, blocker, task còn lại và deadline; trưởng nhóm tổng hợp bằng hội nghị/check-in định kỳ.|Khi toàn bộ nhóm đã đồng nhất cách cập nhật và không cần suy luận từ nhiều nguồn. |Vẫn mất thời gian tổng hợp thủ công; dễ bỏ sót phần “thực tế” không được ghi rõ. | Không chọn|
-| **Rule** |Tạo form chuẩn hoặc công thức tính trạng thái từ dữ liệu có sẵn: task đã xong / đang làm / chậm / chưa bắt đầu; hiển thị phần thiếu sót theo từng thành viên. |Khi tiến độ đã được ghi rõ và chuẩn hóa, không cần AI giải thích ngữ nghĩa. | Không đánh giá được tình huống mơ hồ như “đang làm nhưng chưa chắc hoàn thành”; thiếu khả năng phân tích blocker.|Không chọn |
-| **Workflow** | Thu thập cập nhật từ task board / chat / file / check-in → AI tóm tắt tiến độ, task còn thiếu, rủi ro và gợi ý điều phối → trưởng nhóm review và quyết định hành động.| Khi cần tổng hợp nhiều nguồn, nhưng vẫn giữ người ra quyết định cuối cùng.|AI có thể diễn giải sai trạng thái, bỏ sót blocker hoặc gán “hoàn thành” nhầm. | Chọn|
+| **No AI** (sửa quy trình) | Dùng mẫu cập nhật thống nhất; thành viên điền trạng thái, blocker, việc còn lại và link; trưởng nhóm đọc và tổng hợp thủ công.|Khi mẫu chuẩn và checklist đã giúp giảm đủ công sức tổng hợp.|Vẫn cần trưởng nhóm đọc, nối các cập nhật và diễn giải phần mô tả tự do.| Phương án đối chứng và bước thử đầu tiên|
+| **Rule** |Form kiểm tra trường bắt buộc, hạn cập nhật, trạng thái và task quá hạn; phần thiếu dữ liệu được gắn cờ.|Khi thông tin đã được chuẩn hóa và cần kiểm tra điều kiện rõ ràng.|Không diễn giải tốt mô tả blocker hoặc phần việc còn lại bằng ngôn ngữ tự do.| Dùng làm lớp kiểm tra đầu vào|
+| **Workflow** |Từ mẫu cập nhật có cấu trúc và link do thành viên cung cấp, Rule kiểm tra đủ trường; AI chỉ nháp tóm tắt mô tả blocker/phần còn thiếu kèm nguồn; trưởng nhóm xác nhận.|Khi pilot cho thấy mẫu + Rule chưa đủ để tổng hợp nội dung tự do và AI cải thiện kết quả đo được.|AI có thể diễn giải sai hoặc bỏ sót; còn phụ thuộc vào dữ liệu mà thành viên cung cấp.| Hướng cần kiểm chứng|
 | **Agent** | AI tự quét toàn bộ kênh thông tin, tự đánh giá tiến độ, nhắn nhủ thành viên và đề xuất phân công lại.| Khi hệ thống cần tự thực hiện nhiều bước và chịu trách nhiệm quyết định liên tục.| Quá rộng, dễ sai, khó kiểm soát, tiềm ẩn rủi ro về quyền truy cập và sự tin cậy.| Không chọn|
 
-**Mức chọn:** Workflow
+**Mức đề xuất để kiểm chứng:** Workflow có giới hạn. Đây chưa phải quyết định triển khai: CP4 chưa xác nhận đủ độ tin cậy của dữ liệu, còn CP8 quyết định Not Yet cho tới khi có pilot. Mẫu + Rule là baseline bắt buộc để so sánh.
 
 **Vì sao không chọn mức đơn giản hơn:**
-Candidate #12 không chỉ là “ghi lại tiến độ”, mà là “nắm được tiến độ thực tế và phần còn thiếu” khi thông tin nằm rải rác trong nhiều nguồn: tasks, chat, file, review, milestone.
-Nếu chỉ dùng No AI hoặc Rule, nhóm vẫn phải dành thời gian đọc lại nhiều kênh và quyết định xem “đã thực sự tiến bộ hay chưa”. Đây là nơi AI có giá trị rõ nhất: tóm tắt, so sánh, và phát hiện thiếu sót.
-Tuy nhiên, vì khía cạnh “tiến độ thực tế” có tính chủ quan và dễ sai lệch, AI không nên tự ra quyết định cuối cùng. Vậy Workflow là mức phù hợp để giữ con người ở vị trí kiểm soát và điều phối.
+Candidate #12 là nhu cầu nắm phần còn thiếu trước milestone. CP4 cho thấy thông tin hiện rải rác, nhưng không chứng minh hệ thống có thể tự thu thập hoặc đánh giá đầy đủ từ mọi kênh. Do đó, không giả định AI sẽ quét chat, file hay task board. Trước hết cần thử mẫu cập nhật + Rule; chỉ đưa phần mô tả tự do đã được thành viên chủ động gửi vào AI để tạo nháp có dẫn nguồn nếu baseline chưa đủ. Workflow chỉ đáng chọn nếu pilot chứng minh nó tăng độ chính xác hoặc giảm thời gian rà soát mà không chuyển thêm gánh nặng đáng kể sang thành viên.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | Một bản tóm tắt tiến độ theo từng thành viên: task đã hoàn thành, đang làm, chậm, blocker, phần còn thiếu, nguy cơ trễ trước milestone. |
-| **Judgment** — con người cân nhắc, quyết định gì? | Trưởng nhóm quyết định ai đang chậm, blocker nào thật sự quan trọng, liệu cần phân công lại hoặc điều chỉnh mốc thời gian không. |
+| **Prediction** — AI dự đoán / tạo ra gì? | Nháp tóm tắt nội dung blocker và phần còn thiếu từ mô tả/link mà thành viên cung cấp; kèm nguồn và ghi rõ trường hợp không đủ dữ liệu. AI không xác nhận task đã hoàn thành hay dự đoán chắc chắn nguy cơ trễ. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Trưởng nhóm đối chiếu nháp với nguồn, xác định mức độ ảnh hưởng của blocker và quyết định có cần hỏi lại, nhắc việc hoặc điều phối không. |
 | **Action** — hành động cuối cùng là gì, ai làm? | Trưởng nhóm gửi nhắc, phân công bổ sung, sắp xếp lại công việc hoặc điều hành họp khắc phục chậm tiến độ. |
 | **Outcome** — đo kết quả bằng gì? | Thời gian cần để rà soát tiến độ trước milestone; số task bị phát hiện quá muộn; tỉ lệ milestone đúng hạn; số lần cần điều phối đột xuất. |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Task list, deadline, trạng thái cập nhật, file / comment / chat, milestone, lịch họp. Dữ liệu có sẵn nhưng rải rác. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Chỉ dùng các trường trong mẫu cập nhật do thành viên gửi: task, deadline, trạng thái tự báo, blocker, phần còn lại và link nguồn. Dữ liệu chưa được chuẩn hóa; Rule kiểm tra trường thiếu trước khi AI xử lý. Không mặc định AI có quyền truy cập chat, file hay lịch họp. |
 | **Feedback** — lấy phản hồi ở đâu để cải thiện? | Phản hồi từ trưởng nhóm sau từng milestone: task nào bị đánh giá sai, blocker nào bị bỏ sót, cập nhật nào cần chuẩn hóa hơn. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
@@ -280,22 +276,22 @@ Bỏ sót blocker là tệ hơn. Nếu AI không phát hiện được phần đ
 | Trường | Nội dung |
 |---|---|
 | **Actor** | Trưởng nhóm / PM nhóm phụ trách điều phối tiến độ và milestone của đồ án |
-| **Quy trình** | Mỗi khi sắp đến deadline milestone/báo cáo: nhóm cập nhật task, deadline và blocker từ task board, file, Discord, chat và meeting; trưởng nhóm rà soát và tổng hợp tiến độ để điều phối tiếp theo |
+| **Quy trình** | Trước mỗi milestone/báo cáo, thành viên gửi mẫu gồm task, trạng thái tự báo, blocker, phần còn lại và link sản phẩm; Rule đánh dấu trường thiếu; nếu đủ dữ liệu, AI có thể nháp tóm tắt có dẫn nguồn; trưởng nhóm mở nguồn, xác nhận và tổng hợp để điều phối. Quy trình không giả định tự động thu thập từ chat, file hay task board. |
 | **Bottleneck** | Thông tin tiến độ nằm rải rác và cập nhật không đều; trưởng nhóm mất thời gian để đối chiếu dữ liệu và xác định phần còn thiếu thực tế |
 | **Impact** | Nhiều task chỉ được phát hiện chậm khi gần deadline; nhóm dễ bỏ sót phần còn thiếu, làm tăng công sức gấp rút và nguy cơ trễ milestone |
-| **Success Metric** (baseline → target, cách đo) | Baseline: 45–60 phút/check-in để rà soát tiến độ và xác định ai đang chậm; target: dưới 15 phút/check-in; đo bằng thời gian trưởng nhóm dùng để tổng hợp tiến độ trước mỗi milestone; đồng thời theo dõi số task bị phát hiện quá muộn |
+| **Success Metric** (baseline → target, cách đo) | Baseline sơ bộ: khoảng 50 phút/check-in cho bước đọc và đối chiếu (CP5, ước tính; chưa bấm giờ). Mục tiêu thử nghiệm: dưới 15 phút thao tác của trưởng nhóm/check-in, đo bằng nhật ký thời gian qua 4 lần check-in; thời gian chờ và khoảng 5 phút nhập mẫu/người ghi riêng để thấy phần công việc được chuyển sang thành viên. Đồng thời ghi số blocker/task bị phát hiện muộn và lỗi tóm tắt; chưa có kết quả đo nên đây là mục tiêu, không phải kết quả đạt được. |
 | **Boundary** | AI không tự cập nhật trạng thái cho thành viên, không tự phân công lại việc, không suy luận dựa trên thông tin không có trong input |
-| **AI intervention point** | Sau khi có dữ liệu tiến độ từ task/ file / chat / meeting, trước khi trưởng nhóm quyết định điều phối lại |
-| **Mức chọn** | Workflow |
-| **Rủi ro & người kiểm tra** | AI có thể gộp trạng thái sai, bỏ sót blocker hoặc nhầm lẫn deadline; trưởng nhóm phải xác nhận danh sách blocker và phần còn thiếu trước khi gửi cho cả nhóm |
+| **AI intervention point** | Sau khi thành viên gửi mẫu và Rule kiểm tra đủ trường, trước khi trưởng nhóm đối chiếu nguồn và quyết định điều phối. Nếu thiếu dữ liệu thì dừng ở nhãn “chưa đủ dữ liệu”. |
+| **Mức chọn** | Workflow có giới hạn — giả thuyết cần so với mẫu + Rule; chưa được xác nhận là phù hợp hơn phương án đơn giản. |
+| **Rủi ro & người kiểm tra** | AI có thể diễn giải sai blocker hoặc phần còn thiếu; trưởng nhóm mở link nguồn, sửa hoặc bỏ nháp trước khi chia sẻ. Thành viên chịu trách nhiệm về tính đúng của cập nhật; AI không suy ra mức hoàn thành từ commit hay trạng thái tự báo. |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
 | Actor | Trưởng nhóm muốn biết tiến độ thực tế | Trưởng nhóm / PM nhóm phụ trách điều phối milestone | Làm rõ vai trò người dùng và bối cảnh quyết định |
-| Quy trình | Tổng hợp tiến độ từ nhiều nguồn | Cụ thể hơn: task board + chat + file + meeting + milestone | Đảm bảo AI có input rõ ràng và báo cáo sát với tình huống thực |
-| Success Metric | Chỉ tập trung vào thời gian tổng hợp | Thêm số task phát hiện quá muộn và độ chính xác của tóm tắt | Nhiều người phản biện rằng “nhanh nhưng sai” không phải là giải pháp tốt |
+| Quy trình | Tổng hợp tiến độ từ nhiều nguồn | Thành viên gửi mẫu và link; Rule kiểm tra đủ trường; người phụ trách xác nhận nguồn trước khi dùng | Khớp với CP5 và không giả định tích hợp/tự động truy cập nguồn chưa được kiểm chứng |
+| Success Metric | Thời gian rà soát ước tính ~50 phút; mục tiêu dưới 15 phút | Giữ thời gian là metric chính; ghi thêm lỗi tóm tắt và task/blocker phát hiện muộn trong pilot | CP4 chưa có baseline đo độc lập hoặc dữ liệu chất lượng; các chỉ số bổ sung cần thu thập, chưa phải kết quả |
 | Boundary | AI tóm tắt tiến độ | AI không tự quyết định / cập nhật / phân công | Giữ người kiểm tra ở vị trí quan trọng, giảm rủi ro AI sai |
 
 
