@@ -185,7 +185,7 @@ Ban đầu, tôi cho rằng việc phải kiểm tra LMS, email và group chat l
 
 Sau khi suy nghĩ lại, tôi nhận thấy mình hoàn toàn có thể sử dụng Google Calendar và đặt nhắc nhở trước hạn nộp. Đây là giải pháp đơn giản, dễ thực hiện và chưa cần AI.
 
-Vì vậy, tôi đồng ý không đưa vấn đề này vào shortlist cuối cùng. Qua lần phản biện đó, tôi học được rằng việc bảo vệ ý tưởng ban đầu không quan trọng bằng việc tìm đúng nguyên nhân của vấn đề.
+Vì vậy, dù card #3 vẫn vào shortlist 3 candidate, tôi đồng ý không chọn nó làm candidate cuối cùng; nhóm giữ nó làm phương án đối chứng Rule. Qua lần phản biện đó, tôi học được rằng việc bảo vệ ý tưởng ban đầu không quan trọng bằng việc tìm đúng nguyên nhân của vấn đề.
 
 ### 6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?
 
@@ -196,9 +196,6 @@ Trong nhóm, tôi không trực tiếp phụ trách CP4 mà bạn Cường thự
 Ban đầu, nếu chỉ nhìn tổng thời gian hoàn thành công việc, tôi có thể cho rằng toàn bộ thời gian đều có khả năng được rút ngắn bằng AI. Tuy nhiên, thời gian chờ phản hồi còn phụ thuộc vào con người, nên không thể tự động tính toàn bộ phần đó thành lợi ích của AI.
 
 Tôi nhận ra rằng khi phân tích kết quả kiểm chứng, cần xác định chính xác bước nào gây chậm và bước nào có thể cải thiện bằng giải pháp đề xuất.
-
-*[Cần bổ sung sau khi đối chiếu CP4: một phát hiện cụ thể từ phỏng vấn hoặc research của Cường khiến bạn bất ngờ, nếu có.]*
-
 ### 6.5. Điều khó nhất khi viết Problem Statement là gì?
 
 Đối với tôi, khó khăn lớn nhất khi viết Problem Statement là diễn đạt vấn đề đủ cụ thể, có thể đo lường được nhưng không vô tình đưa giải pháp vào ngay từ đầu.
@@ -215,13 +212,15 @@ Nếu được làm lại, tôi sẽ dành nhiều thời gian hơn để thu th
 
 Tôi cũng sẽ phản biện nhóm mạnh hơn về chất lượng dữ liệu và cách tính lợi ích. Khi xây dựng quy trình CP5, chỉ một số bước có số liệu cụ thể, các bước còn lại vẫn là ước tính. Tôi sẽ đề xuất đo lại từng bước thay vì sử dụng các con số chưa kiểm chứng để đưa ra kết luận.
 
-Ngoài ra, tôi sẽ yêu cầu nhóm so sánh phương án AI với giải pháp Rule hoặc Workflow đơn giản trước khi quyết định triển khai.
+Ngoài ra, tôi sẽ yêu cầu nhóm so sánh phương án Workflow có AI với giải pháp No AI hoặc Rule đơn giản (ví dụ bảng tiến độ chung) trước khi quyết định triển khai.
 
 Điều quan trọng nhất tôi rút ra là cần sẵn sàng thay đổi hoặc loại bỏ ý tưởng nếu bằng chứng chưa đủ thuyết phục.
 
 ### 6.7. Hiểu bài: Chuỗi problem → quy trình → metric → boundary → mức can thiệp AI → quyết định
 
-Nhóm Distro lựa chọn problem #12 liên quan đến việc điều phối và tổng hợp công việc nhóm, trong đó quá trình kiểm tra các bản nháp và chờ phản hồi làm kéo dài thời gian hoàn thành. Từ vấn đề này, nhóm phân tích quy trình hiện tại để xác định bottleneck, đặc biệt là bước mở từng bản nháp mất khoảng 30 phút và thời gian chờ phản hồi khoảng 45 phút. Tiếp theo, nhóm xây dựng metric để đánh giá khả năng rút ngắn thời gian xử lý nhưng vẫn cần bảo đảm chất lượng kết quả tổng hợp. Về boundary, AI chỉ nên hỗ trợ xử lý và tổng hợp thông tin, còn những nội dung cần xác nhận hoặc quyết định cuối cùng phải do con người kiểm tra. Nhóm định hướng mức can thiệp Workflow, kết hợp Rule để kiểm tra dữ liệu đầu vào, AI để hỗ trợ tổng hợp và Human-in-the-loop để xác nhận kết quả. Nếu dữ liệu thiếu hoặc không đạt điều kiện, quy trình phải có phương án quay về xử lý thủ công. Cuối cùng, nhóm đưa ra quyết định **Not Yet** vì cần tiếp tục kiểm chứng dữ liệu và các giả định trước khi triển khai giải pháp AI.
+Nhóm Distro lựa chọn problem #12 liên quan đến việc điều phối và tổng hợp công việc nhóm, trong đó quá trình kiểm tra các bản nháp và chờ phản hồi làm kéo dài thời gian hoàn thành. Từ vấn đề này, nhóm phân tích quy trình hiện tại và xác định bottleneck là bước mở từng bản nháp, mất khoảng 30 phút; thời gian chờ phản hồi khoảng 45 phút được tách riêng vì AI không rút ngắn được phần đó. Tiếp theo, nhóm đặt metric là thời gian rà soát tiến độ, từ khoảng 50 phút xuống dưới 15 phút mỗi đợt, đồng thời theo dõi số task bị phát hiện quá muộn để bảo đảm chất lượng kết quả tổng hợp. Về boundary, AI chỉ tóm tắt từ dữ liệu được đưa vào, không tự gửi tin, không tự sửa trạng thái task và không tự phân công lại; trưởng nhóm phải kiểm tra trước khi dùng kết quả. Nhóm định hướng mức can thiệp Workflow, kết hợp Rule để kiểm tra dữ liệu đầu vào, AI để hỗ trợ tổng hợp và Human-in-the-loop để xác nhận kết quả. Nếu dữ liệu thiếu hoặc không đạt điều kiện, quy trình phải có phương án quay về xử lý thủ công. Cuối cùng, nhóm đưa ra quyết định **Not Yet** vì rủi ro Feasibility còn cao: chất lượng tổng hợp phụ thuộc vào việc thành viên cập nhật đầy đủ, nên cần kiểm chứng dữ liệu và chất lượng đầu ra trước khi chạy pilot.
+
+---
 
 ## 7. Tài liệu tham khảo
 
