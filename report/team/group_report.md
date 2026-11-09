@@ -203,7 +203,7 @@ Tuy nhiên, quy trình vẫn có cấu trúc rõ: task, deadline, trạng thái,
 | **Workflow** | Thu thập cập nhật từ task board / chat / file / check-in → AI tóm tắt tiến độ, task còn thiếu, rủi ro và gợi ý điều phối → trưởng nhóm review và quyết định hành động.| Khi cần tổng hợp nhiều nguồn, nhưng vẫn giữ người ra quyết định cuối cùng.|AI có thể diễn giải sai trạng thái, bỏ sót blocker hoặc gán “hoàn thành” nhầm. | Chọn|
 | **Agent** | AI tự quét toàn bộ kênh thông tin, tự đánh giá tiến độ, nhắn nhủ thành viên và đề xuất phân công lại.| Khi hệ thống cần tự thực hiện nhiều bước và chịu trách nhiệm quyết định liên tục.| Quá rộng, dễ sai, khó kiểm soát, tiềm ẩn rủi ro về quyền truy cập và sự tin cậy.| Không chọn|
 
-**Mức chọn:**Workflow
+**Mức chọn:** Workflow
 
 **Vì sao không chọn mức đơn giản hơn:**
 Candidate #12 không chỉ là “ghi lại tiến độ”, mà là “nắm được tiến độ thực tế và phần còn thiếu” khi thông tin nằm rải rác trong nhiều nguồn: tasks, chat, file, review, milestone.
