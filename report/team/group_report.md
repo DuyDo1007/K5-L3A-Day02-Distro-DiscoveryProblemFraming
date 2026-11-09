@@ -5,7 +5,7 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm:Distro
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu):
 - Quyết định cuối: Go / Not Yet / No-Go
@@ -44,15 +44,17 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian và công sức đièu phối công việc của nhóm,đồng thời hạn chế bỏ sót deadline và việc quan trọng.
+├── Opportunity A: Khó tìm được khung giờ làm việc chung
+├── Opportunity B: Khó nắm bắt và tổng hợp thông tin từ nhiều nguồn
+└── Opportunity C: Dễ bỏ sót các yêu cầu từ nhiều kênh
+└── Opportunity D: Khó nhận biết tiến độ thực tế từ nhiều kênh.
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+× AI tổng hợp thông báo
+× AI lập lịch họp
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
