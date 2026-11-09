@@ -188,68 +188,78 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô:độ mơ hồ trung bình–cao và độ phức tạp trung bình.
 
-Vì sao:
+Vì sao:Candidate #12 là: “Khi gần đến hạn milestone/báo cáo đồ án, trưởng nhóm muốn nắm được tiến độ thực tế và phần còn thiếu của từng thành viên để điều phối việc hoàn thiện kịp thời”.
+Khía cạnh “tiến độ thực tế” không có một định nghĩa duy nhất: mỗi thành viên có cách cập nhật, mức độ phản hồi, và mức độ “đã hoàn thành” khác nhau; do đó, AI cần phải suy luận từ nhiều nguồn chứ không chỉ đọc một bảng duy nhất.
+Tuy nhiên, quy trình vẫn có cấu trúc rõ: task, deadline, trạng thái, blocker, phần còn thiếu. Điều này đủ để xây một workflow có input cố định, thay vì để AI tự hành động như một agent.
 
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Một template cập nhật tiến độ theo nhóm: mỗi người điền status, blocker, task còn lại và deadline; trưởng nhóm tổng hợp bằng hội nghị/check-in định kỳ.|Khi toàn bộ nhóm đã đồng nhất cách cập nhật và không cần suy luận từ nhiều nguồn. |Vẫn mất thời gian tổng hợp thủ công; dễ bỏ sót phần “thực tế” không được ghi rõ. | Không chọn|
+| **Rule** |Tạo form chuẩn hoặc công thức tính trạng thái từ dữ liệu có sẵn: task đã xong / đang làm / chậm / chưa bắt đầu; hiển thị phần thiếu sót theo từng thành viên. |Khi tiến độ đã được ghi rõ và chuẩn hóa, không cần AI giải thích ngữ nghĩa. | Không đánh giá được tình huống mơ hồ như “đang làm nhưng chưa chắc hoàn thành”; thiếu khả năng phân tích blocker.|Không chọn |
+| **Workflow** | Thu thập cập nhật từ task board / chat / file / check-in → AI tóm tắt tiến độ, task còn thiếu, rủi ro và gợi ý điều phối → trưởng nhóm review và quyết định hành động.| Khi cần tổng hợp nhiều nguồn, nhưng vẫn giữ người ra quyết định cuối cùng.|AI có thể diễn giải sai trạng thái, bỏ sót blocker hoặc gán “hoàn thành” nhầm. | Chọn|
+| **Agent** | AI tự quét toàn bộ kênh thông tin, tự đánh giá tiến độ, nhắn nhủ thành viên và đề xuất phân công lại.| Khi hệ thống cần tự thực hiện nhiều bước và chịu trách nhiệm quyết định liên tục.| Quá rộng, dễ sai, khó kiểm soát, tiềm ẩn rủi ro về quyền truy cập và sự tin cậy.| Không chọn|
 
-**Mức chọn:**
+**Mức chọn:**Workflow
 
 **Vì sao không chọn mức đơn giản hơn:**
+Candidate #12 không chỉ là “ghi lại tiến độ”, mà là “nắm được tiến độ thực tế và phần còn thiếu” khi thông tin nằm rải rác trong nhiều nguồn: tasks, chat, file, review, milestone.
+Nếu chỉ dùng No AI hoặc Rule, nhóm vẫn phải dành thời gian đọc lại nhiều kênh và quyết định xem “đã thực sự tiến bộ hay chưa”. Đây là nơi AI có giá trị rõ nhất: tóm tắt, so sánh, và phát hiện thiếu sót.
+Tuy nhiên, vì khía cạnh “tiến độ thực tế” có tính chủ quan và dễ sai lệch, AI không nên tự ra quyết định cuối cùng. Vậy Workflow là mức phù hợp để giữ con người ở vị trí kiểm soát và điều phối.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | Một bản tóm tắt tiến độ theo từng thành viên: task đã hoàn thành, đang làm, chậm, blocker, phần còn thiếu, nguy cơ trễ trước milestone. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Trưởng nhóm quyết định ai đang chậm, blocker nào thật sự quan trọng, liệu cần phân công lại hoặc điều chỉnh mốc thời gian không. |
+| **Action** — hành động cuối cùng là gì, ai làm? | Trưởng nhóm gửi nhắc, phân công bổ sung, sắp xếp lại công việc hoặc điều hành họp khắc phục chậm tiến độ. |
+| **Outcome** — đo kết quả bằng gì? | Thời gian cần để rà soát tiến độ trước milestone; số task bị phát hiện quá muộn; tỉ lệ milestone đúng hạn; số lần cần điều phối đột xuất. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Task list, deadline, trạng thái cập nhật, file / comment / chat, milestone, lịch họp. Dữ liệu có sẵn nhưng rải rác. |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Phản hồi từ trưởng nhóm sau từng milestone: task nào bị đánh giá sai, blocker nào bị bỏ sót, cập nhật nào cần chuẩn hóa hơn. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
+- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:Nhóm muốn AI tóm tắt tiến độ và phát hiện rủi ro, nhưng không muốn AI tự quyết định ai chậm, ai cần được giao việc, hay ai đã hoàn thành thật sự. Điều này cho thấy dạng hỗ trợ (augment), không phải tự động hóa hoàn toàn.
 - AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
-
+Bỏ sót blocker là tệ hơn. Nếu AI không phát hiện được phần đang chậm, nhóm sẽ không kịp điều phối trước milestone. Vì vậy, thiết kế giữ “con người kiểm tra” ở cuối và ưu tiên cảnh báo rủi ro cao thay vì xem AI đã “đánh dấu chắc chắn”.
 ---
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Trưởng nhóm / PM nhóm phụ trách điều phối tiến độ và milestone của đồ án |
+| **Quy trình** | Mỗi khi sắp đến deadline milestone/báo cáo: nhóm cập nhật task, deadline và blocker từ task board, file, Discord, chat và meeting; trưởng nhóm rà soát và tổng hợp tiến độ để điều phối tiếp theo |
+| **Bottleneck** | Thông tin tiến độ nằm rải rác và cập nhật không đều; trưởng nhóm mất thời gian để đối chiếu dữ liệu và xác định phần còn thiếu thực tế |
+| **Impact** | Nhiều task chỉ được phát hiện chậm khi gần deadline; nhóm dễ bỏ sót phần còn thiếu, làm tăng công sức gấp rút và nguy cơ trễ milestone |
+| **Success Metric** (baseline → target, cách đo) | Baseline: 45–60 phút/check-in để rà soát tiến độ và xác định ai đang chậm; target: dưới 15 phút/check-in; đo bằng thời gian trưởng nhóm dùng để tổng hợp tiến độ trước mỗi milestone; đồng thời theo dõi số task bị phát hiện quá muộn |
+| **Boundary** | AI không tự cập nhật trạng thái cho thành viên, không tự phân công lại việc, không suy luận dựa trên thông tin không có trong input |
+| **AI intervention point** | Sau khi có dữ liệu tiến độ từ task/ file / chat / meeting, trước khi trưởng nhóm quyết định điều phối lại |
+| **Mức chọn** | Workflow |
+| **Rủi ro & người kiểm tra** | AI có thể gộp trạng thái sai, bỏ sót blocker hoặc nhầm lẫn deadline; trưởng nhóm phải xác nhận danh sách blocker và phần còn thiếu trước khi gửi cho cả nhóm |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| Actor | Trưởng nhóm muốn biết tiến độ thực tế | Trưởng nhóm / PM nhóm phụ trách điều phối milestone | Làm rõ vai trò người dùng và bối cảnh quyết định |
+| Quy trình | Tổng hợp tiến độ từ nhiều nguồn | Cụ thể hơn: task board + chat + file + meeting + milestone | Đảm bảo AI có input rõ ràng và báo cáo sát với tình huống thực |
+| Success Metric | Chỉ tập trung vào thời gian tổng hợp | Thêm số task phát hiện quá muộn và độ chính xác của tóm tắt | Nhiều người phản biện rằng “nhanh nhưng sai” không phải là giải pháp tốt |
+| Boundary | AI tóm tắt tiến độ | AI không tự quyết định / cập nhật / phân công | Giữ người kiểm tra ở vị trí quan trọng, giảm rủi ro AI sai |
+
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Đúng trạng thái task | Mọi task được AI mô tả đúng với dữ liệu đã có; không gán “hoàn thành” cho task chưa xong | Có task đánh dấu sai trạng thái hoặc bỏ sót task đang thực hiện |
+| 2 | Không bỏ sót blocker | Tất cả blocker quan trọng xuất hiện trong input đều được liệt kê | Có blocker rõ ràng nhưng không được nhắc đến |
+| 3 | Phân biệt rõ phần còn thiếu | AI nêu được ai đang chậm, thiếu gì và cần làm gì tiếp | Tóm tắt chung chung, không xác định người chịu trách nhiệm |
+| 4 | Dễ đọc trong 2 phút | Bản tóm tắt ngắn, rõ, có nhấn mạnh rủi ro và mốc quan trọng | Dài dòng, mơ hồ, khó rà soát ngay |
 
 ---
 
