@@ -139,16 +139,11 @@ HIỆN TẠI — 110 phút/đợt deadline
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card (CP2–CP3) | Đưa ra ba candidate: đánh giá độ phù hợp CV với JD (#10), đối chiếu điều kiện xét tốt nghiệp (#11), và theo dõi tiến độ/phần còn thiếu trước milestone (#12). | Candidate #12 được chọn làm bài toán của nhóm; ba pitch được ghi tại `group_report.md`, mục 2.1. |
+| Phản biện và nhận phản biện (CP3) | Đặt câu hỏi phản biện cho các pitch của Duy; đồng thời nhận câu hỏi từ Dương về tiêu chí tính độ phù hợp CV/JD và vấn đề thực sự đằng sau việc theo dõi tiến độ. | Các trao đổi giúp nhóm xem lại bằng chứng, baseline, nguyên nhân gốc và ranh giới giữa trạng thái được báo với việc đã hoàn thành. Câu hỏi được ghi tại `group_report.md`, mục 2.1. |
+| Chọn candidate problem (CP3) | Tham gia thảo luận và lựa chọn candidate #12 từ shortlist. | Nhóm chọn bài toán trưởng nhóm nắm tiến độ thực tế và phần còn thiếu trước milestone; điểm shortlist 28/35. Bằng chứng: `group_report.md`, mục 2.4. |
+| Kiểm chứng và research (CP4) | Phụ trách toàn bộ CP4: lập assumption map, phỏng vấn và ghi snapshot, research giải pháp có sẵn, rồi so sánh các công cụ. | Có 3 interview snapshots với trưởng nhóm, thành viên cập nhật thường xuyên và thành viên cập nhật chậm; bảng research so sánh Trello, Notion Projects, GitHub Projects và Linear. Kết quả cho thấy cập nhật có thể thiếu/không đồng nhất, nhưng trạng thái hay số commit không đủ để kết luận chất lượng hoàn thành. Bằng chứng: `group_report.md`, mục 3.1–3.3; `report/assets/cp4-interview-snapshot-1.md` đến `-3.md`. |
+| CP5, CP6, CP7 | Có tham gia trao đổi với nhóm nhưng không trực tiếp phụ trách/soạn các sản phẩm ở các checkpoint này. | Quy trình, Problem Statement, mức Workflow và quyết định Not Yet là kết quả chung được ghi tại `group_report.md`, mục 4–8; không ghi nhận đây là phần việc trực tiếp của tôi. |
 
 ---
 
@@ -158,33 +153,56 @@ HIỆN TẠI — 110 phút/đợt deadline
 |---|---|---|---|---|
 | CP1 Scan | Gợi ý thêm các vấn đề của sinh viên năm cuối theo 4 lăng kính | Mở rộng góc nhìn về giai đoạn thực tập (codebase legacy) và tìm việc (CV/JD) | Hay đưa ra giải pháp toàn năng (chatbot giải đáp mọi thứ), vi phạm solution-first | Lọc bỏ các ý chung chung, bổ sung số liệu thời gian và tần suất đo đạc thực tế |
 | CP2 Problem Card | Đóng vai Product Manager hoài nghi để phản biện 3 Problem Cards (về quy trình, bottleneck, metric và tính khả thi) | Chất vấn sắc bén về nguy cơ spam ứng tuyển ở Card #1, sự tồn tại của hệ thống đào tạo sẵn có ở Card #2, và quyền riêng tư ở Card #3 | Ban đầu gợi ý tính năng auto-apply hàng loạt (dễ bị xem là spam) và tự ý quét ổ cứng cá nhân (vi phạm privacy) | Điều chỉnh về mô hình Human-in-the-loop (sinh viên review trước khi nộp), giới hạn phạm vi quét file trong shared project directory |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Dùng AI hỗ trợ research các giải pháp có sẵn và lập so sánh giữa Trello, Notion Projects, GitHub Projects và Linear. | Hỗ trợ hệ thống hóa các công cụ theo chức năng, điểm mạnh, giới hạn và mức liên quan tới quy trình của nhóm. | Nội dung do AI gợi ý có thể thiếu hoặc khái quát quá mức; không thể thay cho kiểm tra tính năng trên tài liệu sản phẩm gốc. | Đối chiếu lại với nguồn chính thức, giữ các giới hạn và khoảng trống trong bảng research ở `group_report.md`, mục 3.3. |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
-
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Khi nghe các nhóm trình bày, tôi nhận ra một problem tốt không nhất thiết phải là vấn đề quá lớn hay phức tạp. Những vấn đề nhỏ trong quy trình hằng ngày vẫn có giá trị nếu xảy ra thường xuyên, gây lãng phí thời gian hoặc ảnh hưởng đến kết quả công việc. Tôi cũng học được cách nhìn một vấn đề từ góc độ người trực tiếp thực hiện quy trình, thay vì chỉ nhìn từ góc độ người muốn xây dựng sản phẩm. Điều quan trọng không phải giải pháp nghe hấp dẫn đến đâu, mà là problem có thực sự tồn tại và đủ đáng để giải quyết hay không.
+
+**6.2. Nhóm có lúc nào bị "solution-first" không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Tôi nghĩ nhóm có nguy cơ rơi vào solution-first khi bắt đầu thảo luận về việc sử dụng AI để tự động tổng hợp tiến độ, phát hiện blocker và tạo báo cáo cho leader. Khi đó, chúng tôi có thể mặc định rằng AI là giải pháp cần triển khai trước khi chứng minh liệu vấn đề có thực sự cần đến AI hay không.
+
+Nhóm đã cố gắng quay lại phân tích quy trình hiện tại, phỏng vấn người dùng và nghiên cứu các công cụ có sẵn như Trello, Notion, GitHub Projects và Linear. Qua đó, chúng tôi nhận ra một phần vấn đề có thể được giải quyết bằng form cập nhật thống nhất, checklist và rule kiểm tra dữ liệu. AI chỉ thực sự có giá trị khi cần tổng hợp thông tin phi cấu trúc, diễn giải mô tả công việc hoặc hỗ trợ phát hiện blocker từ nội dung người dùng cung cấp.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có. Một điểm khiến tôi phải xem xét lại là mức độ cần thiết của AI trong giải pháp. Ban đầu, việc sử dụng AI để tổng hợp tiến độ và phát hiện vấn đề có vẻ hợp lý. Tuy nhiên, khi xem xét các công cụ quản lý dự án hiện có và khả năng chuẩn hóa dữ liệu đầu vào, tôi nhận ra rằng nhiều tác vụ như kiểm tra trạng thái, deadline, checklist hay trường thông tin còn thiếu hoàn toàn có thể xử lý bằng rule.
+
+Điều đó khiến tôi thay đổi cách nhìn: không nên mặc định sử dụng AI cho toàn bộ quy trình. Nhóm cần chứng minh phần nào thực sự cần khả năng xử lý ngôn ngữ và tổng hợp của AI, phần nào chỉ cần automation thông thường. Đây cũng là lý do quyết định cuối cùng của nhóm là **Not Yet**, thay vì vội vàng triển khai.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Có. Điều khiến tôi bất ngờ nhất là việc một thành viên đã hoàn thành công việc nhưng chưa push code lên GitHub, trong khi một vấn đề liên quan đến API chỉ được phát hiện khi leader hỏi sát deadline. Điều này cho thấy trạng thái công việc được báo cáo và bằng chứng thực tế về mức độ hoàn thành không phải lúc nào cũng trùng khớp.
+
+Tôi nhận ra rằng nếu hệ thống chỉ dựa vào trạng thái do thành viên tự cập nhật hoặc lịch sử commit thì vẫn có thể đưa ra nhận định sai. Giải pháp cần phân biệt rõ giữa thông tin được báo cáo, bằng chứng đính kèm và những trường hợp chưa đủ dữ liệu để kết luận.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là xác định đúng ranh giới của vấn đề và diễn đạt nó mà không vô tình đưa giải pháp vào Problem Statement. Ban đầu, rất dễ mô tả vấn đề theo hướng "thiếu một hệ thống AI theo dõi tiến độ", nhưng đó thực chất đã là giả định về giải pháp.
+
+Nhóm phải quay lại xác định ai đang gặp vấn đề, họ gặp vấn đề ở bước nào, nguyên nhân đến từ đâu và hậu quả có thể đo lường bằng metric nào. Ngoài ra, cần phân biệt thời gian leader thực sự bỏ ra để tổng hợp và kiểm tra với thời gian chờ thành viên phản hồi. Nếu không tách bạch, metric baseline và target sẽ thiếu chính xác.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Nếu làm lại, tôi sẽ yêu cầu nhóm xác định rõ phạm vi dữ liệu ngay từ khi thiết kế quy trình tương lai. Cụ thể, cần thống nhất MVP sẽ nhận dữ liệu từ form cập nhật có cấu trúc hay tự động thu thập từ nhiều nguồn như GitHub, chat và file tài liệu. Không nên mô tả quy trình ở một phần là nhập form thủ công, nhưng sang phần giải pháp lại giả định hệ thống có thể tự động truy cập và tổng hợp nhiều nguồn dữ liệu.
+
+Tôi cũng sẽ phản biện mạnh hơn ở ba điểm:
+
+1. **AI có thực sự cần thiết không?** Cần so sánh với phương án form + rule + checklist trước khi chọn Workflow có AI.
+2. **Dữ liệu có đủ tin cậy không?** Phải xử lý rõ trường hợp có cập nhật nhưng thiếu bằng chứng, có bằng chứng nhưng chưa cập nhật, hoặc các nguồn thông tin mâu thuẫn.
+3. **Metric có nhất quán không?** Cần phân biệt thời gian của leader, thời gian thành viên cập nhật và tổng effort của cả nhóm, tránh chỉ tối ưu thời gian của một người nhưng làm tăng công việc của những người còn lại.
+
+**6.7. Hiểu bài**
+
+Bài toán nhóm tôi lựa chọn là việc leader khó theo dõi tiến độ và phần còn thiếu của từng thành viên trước milestone, do thông tin cập nhật chưa thống nhất và bằng chứng hoàn thành còn phân tán. Trong quy trình hiện tại, leader phải nhắc nhở, chờ phản hồi, đọc và đối chiếu thông tin, kiểm tra sản phẩm rồi mới tổng hợp báo cáo. Metric chính là thời gian leader cần để tổng hợp và kiểm tra tiến độ, với baseline ước tính khoảng 45–60 phút và mục tiêu dưới 15 phút. Phạm vi giải pháp cần tập trung vào việc hỗ trợ chuẩn bị báo cáo trước milestone, không thay thế leader đánh giá chất lượng công việc hay quyết định phân công. Nhóm định hướng sử dụng Workflow kết hợp Rule và AI: Rule kiểm tra dữ liệu bắt buộc, còn AI hỗ trợ tổng hợp nội dung cập nhật và mô tả blocker từ dữ liệu được cung cấp. Tuy nhiên, AI không được tự suy đoán trạng thái hoàn thành khi thiếu bằng chứng; các trường hợp không đủ dữ liệu phải được chuyển cho con người kiểm tra. Cuối cùng, nhóm quyết định **Not Yet** vì giá trị tiềm năng đã có nhưng tính khả thi của việc thu thập dữ liệu và độ tin cậy của kết quả vẫn cần được kiểm chứng thêm.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Tài liệu sản phẩm được dùng trong bảng research: [Trello Automation](https://trello.com/en/butler-automation), [Notion Projects and Tasks](https://www.notion.com/en-gb/help/guides/getting-started-with-projects-and-tasks), [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects), [Linear Project Milestones](https://linear.app/docs/project-milestones).
