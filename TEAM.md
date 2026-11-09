@@ -83,22 +83,22 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-*Đánh giá rủi ro và đề xuất quyết định; xác định hạn chế, hướng tiếp theo và tổng hợp tài liệu tham khảo.
+* Đánh giá rủi ro và đề xuất quyết định; xác định hạn chế, hướng tiếp theo và tổng hợp tài liệu tham khảo.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-*Phân tích bốn rủi ro: Value, Usability, Feasibility và Viability cho bài toán hỗ trợ trưởng nhóm tổng hợp tiến độ trước milestone.
-*Đề xuất Not Yet vì chưa đủ bằng chứng về chất lượng dữ liệu, độ chính xác và lợi ích tiết kiệm thời gian.
-*Xác định các điều kiện cần kiểm chứng trước khi thử nghiệm; đề xuất pilot trong một nhóm, hai tuần và tối thiểu bốn lần check-in.
-*Xây dựng ngưỡng dừng khi AI báo sai trạng thái, bỏ sót blocker, không tiết kiệm thời gian hoặc dữ liệu đầu vào không đầy đủ.
-*Tổng hợp hạn chế, đề xuất các bước tiếp theo và ghi nguồn phương pháp tham khảo.
+* Phân tích bốn rủi ro: Value, Usability, Feasibility và Viability cho bài toán hỗ trợ trưởng nhóm tổng hợp tiến độ trước milestone.
+* Đề xuất Not Yet vì chưa đủ bằng chứng về chất lượng dữ liệu, độ chính xác và lợi ích tiết kiệm thời gian.
+* Xác định các điều kiện cần kiểm chứng trước khi thử nghiệm; đề xuất pilot trong một nhóm, hai tuần và tối thiểu bốn lần check-in.
+* Xây dựng ngưỡng dừng khi AI báo sai trạng thái, bỏ sót blocker, không tiết kiệm thời gian hoặc dữ liệu đầu vào không đầy đủ.
+* Tổng hợp hạn chế, đề xuất các bước tiếp theo và ghi nguồn phương pháp tham khảo.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
-*Mục 8.1: Bảng đánh giá bốn rủi ro.
-*Mục 8.2: Quyết định Not Yet, điều kiện kiểm chứng, pilot và ngưỡng dừng.
-*Mục 9: Hạn chế và hướng tiếp theo.
-*Mục 10: Tài liệu tham khảo.
+* Mục 8.1: Bảng đánh giá bốn rủi ro.
+* Mục 8.2: Quyết định Not Yet, điều kiện kiểm chứng, pilot và ngưỡng dừng.
+* Mục 9: Hạn chế và hướng tiếp theo.
+* Mục 10: Tài liệu tham khảo.
 
 **Điều mình học được từ phần nhóm:**
 
