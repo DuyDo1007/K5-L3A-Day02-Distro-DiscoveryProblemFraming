@@ -102,10 +102,10 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Điều mình học được từ phần nhóm:**
 
-*Một giải pháp AI có thể xây được chưa chắc đã mang lại giá trị; cần so sánh với cách làm đơn giản như bảng tiến độ chung.
-*AI chỉ tổng hợp được dữ liệu đã cung cấp, không thể tự biết tiến độ thực tế khi thành viên cập nhật thiếu hoặc mâu thuẫn.
-*Khi đánh giá hiệu quả, phải tính cả thời gian chuẩn bị dữ liệu, kiểm tra và sửa đầu ra.
-*Quyết định Not Yet cần đi kèm điều kiện kiểm chứng và ngưỡng dừng rõ ràng; trưởng nhóm vẫn chịu trách nhiệm xác nhận và quyết định điều phối.
+* Một giải pháp AI có thể xây được chưa chắc đã mang lại giá trị; cần so sánh với cách làm đơn giản như bảng tiến độ chung.
+* AI chỉ tổng hợp được dữ liệu đã cung cấp, không thể tự biết tiến độ thực tế khi thành viên cập nhật thiếu hoặc mâu thuẫn.
+* Khi đánh giá hiệu quả, phải tính cả thời gian chuẩn bị dữ liệu, kiểm tra và sửa đầu ra.
+* Quyết định Not Yet cần đi kèm điều kiện kiểm chứng và ngưỡng dừng rõ ràng; trưởng nhóm vẫn chịu trách nhiệm xác nhận và quyết định điều phối.
 
 ### Đỗ Đắc Duy-2A202603604
 
