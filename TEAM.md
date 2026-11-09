@@ -14,7 +14,7 @@
 | --: | -------------- | ----------- | -------------------------------------------------------------- | ---------------- |
 |   1 | Đỗ Đắc Duy     | 2A202603604 | Trưởng nhóm - ghi chép,viết Problem Statement                  | DuyDo1007        |
 |   2 | Đào Kiên Cường | 2A202603396 | Kiểm chứng và research giải pháp đã có của candidate được chọn | daokiencuong     |
-|   3 |                |             |                                                                |                  |
+|   3 | Nguyễn Thùy Dương | 2A202603388 |  Đánh giá rủi ro, đề xuất Go/Not Yet/No-Go; xác định điều kiện thử nghiệm, ngưỡng dừng, hạn chế và hướng tiếp theo  |                  |
 |   4 |                |             |                                                                |                  |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
@@ -31,7 +31,7 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP5 — Quy trình trước/sau                  |             |              | Quy trình + bảng before/after                  |
 | CP5 — Problem Statement v0                 |             |              | Problem Statement v0                           |
 | CP6 — Mức can thiệp + Problem Statement v1 | Duy         | Dương        | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định                           |             |              | 4 rủi ro + Go/Not Yet/No-Go                    |
+| CP6 — Quyết định                           | Duong          |              | 4 rủi ro + Go/Not Yet/No-Go                    |
 
 ## Cá nhân
 
