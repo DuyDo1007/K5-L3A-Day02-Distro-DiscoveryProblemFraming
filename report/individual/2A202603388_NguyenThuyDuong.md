@@ -188,54 +188,70 @@ Trả lời ngắn, chỉ nói điểm yếu.
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-| Hoạt động                  | Tôi đã làm gì?         | Kết quả / ảnh hưởng tới bài nhóm |
-| -------------------------- | ---------------------- | -------------------------------- |
-| Pitch Problem Card         |                        |                                  |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt:    |                                  |
-| Nhận phản biện             | Câu hỏi tôi nhận được: | Tôi đã sửa gì:                   |
-| Gom cluster / cây OST      |                        |                                  |
-| Chọn candidate problem     |                        |                                  |
-| Kiểm chứng / research      |                        |                                  |
-| Quy trình nhóm             |                        |                                  |
-| Problem Statement          |                        |                                  |
-| Mức can thiệp AI           |                        |                                  |
-| Quyết định                 |                        |                                  |
+| Hoạt động                  | Tôi đã làm gì?                                                                                                                                                                                                                               | Kết quả / ảnh hưởng tới bài nhóm                                                                                                                                                                           |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pitch Problem Card         | Chuẩn bị 3 card: rà soát hợp đồng thuê trọ, ghi chú video bài giảng và chia chi phí ở ghép; chọn card hợp đồng để chuẩn bị pitch. Báo cáo nhóm ghi ba candidate này ở mục 2.1.                                                               | Bổ sung ba hướng vấn đề có actor, quy trình và phương án không dùng AI để nhóm so sánh.                                                                                                                    |
+| Phản biện bài của bạn khác | Báo cáo nhóm ghi các câu hỏi của tôi cho Đào Kiên Cường: điểm phù hợp CV–JD dựa trên tiêu chí nào; nếu chọn sai quy chế tốt nghiệp thì đối chiếu còn đáng tin không; nếu thành viên không đưa bản nháp lên thì quét file giải quyết được gì? | Làm rõ yêu cầu về tiêu chí đánh giá, chọn đúng nguồn và giới hạn khi thiếu dữ liệu. Chưa ghi nhận thay đổi cụ thể của từng card sau các câu hỏi này.                                                       |
+| Nhận phản biện             | Kiều Đình Văn hỏi về tần suất ký hợp đồng và tiền cọc thực sự bị ảnh hưởng; với video, hỏi pain nằm ở ghi chép hay tìm lại; với chia tiền, hỏi thời gian mất vào tính toán hay nhắc thanh toán.                                              | Bản cá nhân hiện đã tách bottleneck chính khỏi pain phụ, ghi rõ thời gian chưa đo và giữ phương án checklist/bảng tính để so sánh. Chưa khẳng định các thay đổi này đều phát sinh trực tiếp từ buổi pitch. |
+| Gom cluster / cây OST      | Đối chiếu các candidate cá nhân với cluster trong báo cáo: hợp đồng và chia tiền thuộc nhóm đối chiếu thông tin; ghi chú video thuộc nhóm tìm và hiểu kiến thức.                                                                             | Làm rõ các card cá nhân so với outcome điều phối công việc nhóm. Không nhận là người trực tiếp xây OST khi chưa có ghi nhận phân công.                                                                     |
+| Chọn candidate problem     | Đối chiếu ba card cá nhân với candidate #12 được chọn trong báo cáo nhóm: theo dõi tiến độ và phần còn thiếu trước milestone.                                                                                                                | Phần đóng góp tiếp theo tập trung vào bài toán chung thay vì tiếp tục phát triển riêng card hợp đồng.                                                                                                      |
+| Kiểm chứng / research      | Dùng AI hỗ trợ mở và tổng hợp nguồn phương pháp cho phần tài liệu tham khảo: Anthropic, Google PAIR và SVPG.                                                                                                                                 | Bổ sung nguồn cho phân biệt Workflow/Agent, nhu cầu người dùng và bốn rủi ro. Không tính việc đọc framework là phỏng vấn hoặc bằng chứng pain.                                                             |
+| Quy trình nhóm             | Ở phần quyết định, mô tả phạm vi thử: cung cấp cập nhật → AI tạo nháp → trưởng nhóm kiểm tra → trưởng nhóm quyết định.                                                                                                                       | Làm rõ điểm kiểm tra của con người và việc AI không tự gửi tin, sửa trạng thái hoặc phân công. Không nhận là người hoàn thành toàn bộ sơ đồ nhóm.                                                          |
+| Problem Statement          | Dùng nội dung v1 ở mục 7 báo cáo nhóm để xây dựng quyết định và mục tiêu pilot.                                                                                                                                                              | Giữ mục tiêu dưới 15 phút/check-in là mục tiêu cần đánh giá, không ghi thành kết quả đã đạt.                                                                                                               |
+| Mức can thiệp AI           | Bổ sung lập luận cho hướng Workflow có người duyệt, đồng thời giữ bảng tiến độ No AI/Rule làm phương án đối chứng và quay về.                                                                                                                | Không mặc định cần Agent; chỉ tiếp tục Workflow nếu có lợi ích hơn cách làm đơn giản.                                                                                                                      |
+| Quyết định                 | Dùng AI hỗ trợ chỉnh lại lời văn mục 8, 9, 10 của báo cáo nhóm; nội dung đã push trong commit `e0b22d7`.                                                                                                                                     | Có bảng bốn rủi ro, đề xuất Not Yet, điều kiện pilot, ngưỡng dừng, hạn chế và tài liệu tham khảo. Đề xuất này cần nhóm chốt.                                                                               |
 
 ---
 
 ## 5. Dùng AI
 
-| Checkpoint                     | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
-| ------------------------------ | ---------------------- | ----------------- | -------------------------- | ----------------------------------- |
-| CP1 Scan                       |                        |                   |                            |                                     |
-| CP2 Problem Card               |                        |                   |                            |                                     |
-| CP4 Research                   |                        |                   |                            |                                     |
-| CP5 Quy trình                  |                        |                   |                            |                                     |
-| CP5–6 Problem Statement        |                        |                   |                            |                                     |
-| CP6 Mức can thiệp / quyết định |                        |                   |                            |                                     |
+Bảng tập trung vào hỗ trợ nội dung, không liệt kê riêng các thao tác định dạng và trình bày.
+
+| Checkpoint   | Tôi dùng AI để làm gì?                                             | AI hữu ích ở đâu?                                              | AI sai hoặc hời hợt ở đâu?                                                   | Tôi sửa gì bằng nhận định của mình?                       |
+| ------------ | ------------------------------------------------------------------ | -------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------- |
+| CP4 Research | Hỗ trợ tra nguồn phương pháp.                                      | Tìm nguồn về Workflow/Agent, nhu cầu người dùng và bốn rủi ro. | Nguồn phương pháp không chứng minh pain hoặc hiệu quả thực tế.               | Giới hạn nguồn ở vai trò tài liệu tham khảo.              |
+| CP5–6        | Phản biện metric, boundary; hỗ trợ soạn quyết định và ngưỡng dừng. | Làm rõ rủi ro, điều kiện pilot và phương án quay về.           | Bản đầu đưa nhận xét ngoài phạm vi yêu cầu; các ngưỡng chưa được thử nghiệm. | Tôi yêu cầu thu hẹp phạm vi và ghi các ngưỡng là đề xuất. |
+| CP7          | Soạn nháp nhật ký và reflection từ nội dung đã ghi nhận.           | Tổng hợp các thay đổi và câu hỏi phản biện.                    | Không phản ánh được cảm nhận và trải nghiệm thực tế của tôi.                 | Tôi cần tự viết lại reflection trước khi nộp.             |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
-
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Nhìn lại các vấn đề của nhóm, tôi thấy nhiều việc tưởng khác nhau lại có điểm chung. Tìm tài liệu, gom deadline hay theo dõi tiến độ đều có thể mất thời gian vì thông tin nằm ở nhiều nơi. Tuy vậy, cách giải quyết không hẳn giống nhau. Có việc chỉ cần một bảng chung, có việc còn phải đọc và hiểu nội dung. Vì thế, cần nói rõ mình đang vướng ở bước nào trước khi chọn cách làm.
+
+**6.2. Nhóm có lúc nào bị “solution-first” không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Trong cây OST của nhóm có những ý như “AI tổng hợp thông báo” và “AI lập lịch họp”. Đây đã là cách giải quyết, chưa phải vấn đề, nên chúng được gạch khỏi tầng opportunity. Nhóm quay lại mô tả những khó khăn như bỏ sót yêu cầu hoặc khó nắm tiến độ. Với bài chia tiền của tôi cũng vậy: nếu công thức trong bảng tính đã xử lý được thì không cần thêm AI chỉ để bài trông phức tạp hơn.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Ở card hợp đồng thuê trọ, mục tiêu ban đầu là rà soát dưới 5 phút và phát hiện 100% điều khoản bất lợi. Sau khi xem lại, bản chỉnh đã bỏ mục tiêu này vì chưa có cơ sở để bảo đảm. Tôi cũng cần cân nhắc câu hỏi của bạn Văn: một năm ký hợp đồng mấy lần, và điều đáng quan tâm là thời gian đọc hay khoản tiền có thể bị ảnh hưởng? Câu hỏi đó giúp làm rõ hướng cần tìm hiểu tiếp, thay vì chỉ đặt mục tiêu đọc nhanh hơn.
+
+**6.4. Kết quả kiểm chứng hoặc research có làm tôi bất ngờ không? Điều gì?**
+
+Qua tài liệu tham khảo, điểm đáng chú ý là không phải cứ có nhiều bước thì cần Agent. Với bài của nhóm, các bước đã có thể xác định trước: gom cập nhật, tạo bản tóm tắt, trưởng nhóm kiểm tra rồi quyết định. Workflow phù hợp với hướng này hơn. Phần research ở đây giúp hiểu cách chọn mức can thiệp; nó không thay cho ý kiến hay trải nghiệm của người thực sự dùng cách làm đó.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Điểm khó là làm rõ thế nào mới được coi là “tiến độ thực tế”. Một bạn chưa cập nhật không có nghĩa là chưa làm, còn có bản nháp cũng chưa chắc đã xong. Nếu chỉ yêu cầu AI tóm tắt nhanh thì rất dễ bỏ qua chuyện này. Vì vậy, ngoài thời gian, cần xem bản tóm tắt có đúng trạng thái và bỏ sót blocker không. Trưởng nhóm vẫn phải kiểm tra trước khi điều phối.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi _problem → quy trình → metric → boundary → mức can thiệp AI → quyết định_ của bài nhóm mình.
+Nếu làm lại, tôi sẽ bắt đầu từ một lần check-in cụ thể và ghi rõ từng bước mất bao lâu. Sau đó thử một mẫu cập nhật chung trước khi nghĩ đến AI. Tôi muốn làm rõ hai câu hỏi: nếu thành viên không đưa thông tin lên thì công cụ dựa vào đâu để tổng hợp, và nếu bảng chung đã đủ thì AI giúp thêm được gì? Khi so sánh cũng phải tính cả thời gian chuẩn bị dữ liệu và sửa bản nháp, chứ không chỉ nhìn thời gian AI trả lời.
+
+**6.7. Hiểu bài:** tự giải thích chuỗi _problem → quy trình → metric → boundary → mức can thiệp AI → quyết định_ bằng 5–8 câu, không nhìn tài liệu.
+
+Gợi ý để tự ôn: Trưởng nhóm cần biết phần việc còn thiếu trước milestone. Quy trình gồm gom cập nhật, đối chiếu, tổng hợp và xác nhận. Kết quả cần đo cả thời gian lẫn lỗi bỏ sót. Trưởng nhóm giữ quyền xác nhận và điều phối. Workflow là hướng đề xuất vì các bước đã định sẵn. Quyết định hiện tại là Not Yet, cần kiểm tra dữ liệu và chất lượng đầu ra trước khi thử pilot.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- [Báo cáo nhóm Distro](../team/group_report.md): candidate, câu hỏi phản biện, mức can thiệp, tiêu chí đánh giá và đề xuất quyết định.
+- [Worksheet](../../docs/01-worksheet.md): hướng dẫn Problem Card, mức can thiệp, reflection và cách tự kiểm tra.
+- [Rules](../../RULES.md): quy định sử dụng AI và yêu cầu ghi nhận đóng góp.
+- [Rubric](../../RUBRIC.md): tiêu chí đánh giá báo cáo cá nhân.
+- [Framework quốc tế](../../docs/03-international-frameworks.md): giải thích các phương pháp dùng trong lab.
+- Các nguồn Anthropic, Google PAIR và SVPG được dẫn tại [mục 10 báo cáo nhóm](../team/group_report.md#10-tài-liệu-tham-khảo); chỉ dùng làm tài liệu phương pháp.
