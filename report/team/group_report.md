@@ -60,19 +60,23 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| #12 Theo dõi tiến độ và phần còn thiếu của thành viên trước milestone | 5 | 4 | 3 | 4 | 4 | 4 | 4 | **28** |
+| #3 Gom deadline được thông báo rải rác về một chỗ | 4 | 4 | 3 | 3 | 5 | 5 | 4 | **28** |
+| #4 Tổng hợp thông báo, yêu cầu và deadline từ nhiều kênh mỗi ngày | 4 | 4 | 3 | 4 | 3 | 4 | 3 | **25** |
 
-**Candidate được chọn:**
+**Candidate được chọn (đề xuất theo hướng OST hiện có):**  
+Khi gần đến hạn milestone/báo cáo đồ án, trưởng nhóm muốn nắm được tiến độ thực tế và phần còn thiếu của từng thành viên để điều phối việc hoàn thành đúng hạn.
 
-**Vì sao chọn:**
+**Vì sao chọn:**  
+Candidate #12 khớp trực tiếp với outcome về điều phối công việc nhóm và opportunity “khó nhận biết tiến độ thực tế”. Actor, thời điểm và bottleneck đã được mô tả tương đối rõ; báo cáo cá nhân có ước tính khoảng 110 phút/đợt deadline cho việc hỏi, chờ phản hồi và kiểm tra bản nháp. Quy trình cũng có thể so sánh với các cách đơn giản hơn như quy ước cập nhật tiến độ, checklist hoặc bảng theo dõi. Tuy nhiên, con số này vẫn cần xác minh và chưa phải bằng chứng kiểm chứng từ nhiều nhóm.
 
-**Vì sao loại các candidate còn lại:**
+**Vì sao loại các candidate còn lại:**  
+- **#3 — Gom deadline:** có phương án Rule đơn giản (một lịch chung và nhắc hạn), nên phù hợp làm phương án đối chứng; tần suất pain được ghi nhận còn thấp và chưa đủ căn cứ để ưu tiên hơn bài toán tiến độ nhóm.  
+- **#4 — Tổng hợp thông tin nhiều kênh:** pain có phạm vi rộng nhưng gộp nhiều loại thông tin và nguồn dữ liệu; baseline khoảng 45 phút/ngày còn sơ bộ, có nguy cơ trùng thời gian giữa các hoạt động. Cần thu hẹp phạm vi trước khi chọn.  
+- Các candidate khác có bối cảnh hoặc actor riêng, nhưng ít khớp hơn với outcome điều phối công việc nhóm đã ghi trong OST; một số có phương án No AI/Rule rõ hoặc số liệu chưa được xác nhận.
 
-**Xử lý bất đồng (nếu có):**
-
----
+**Xử lý bất đồng (nếu có):**  
+Tài liệu hiện có chưa ghi lại bất đồng hoặc kết quả thống nhất cuối cùng. Đề xuất nhóm xác nhận candidate #12 với các thành viên trước khi xem đây là quyết định chung; đặc biệt kiểm tra lại baseline 110 phút/đợt và thống nhất cách đo.
 
 ## 3. Kiểm chứng + research giải pháp đã có (CP4)
 
