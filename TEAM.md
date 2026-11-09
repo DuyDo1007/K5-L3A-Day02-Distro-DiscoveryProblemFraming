@@ -131,22 +131,3 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 * Problem Statement cần dựa trên bằng chứng và được điều chỉnh khi nhóm hiểu rõ hơn về người dùng, quy trình và các giả định.
 * Khi cân nhắc dùng AI, cần xác định rõ mức can thiệp phù hợp và so sánh với cách làm đơn giản hơn.
 * Điều phối và ghi chép giúp nhóm thống nhất quyết định, nhưng cần ghi rõ bằng chứng và việc cần kiểm chứng tiếp theo.
-
-### HoVaTen-MSSV
-
-**Phần việc phụ trách:**
-
-*
-
-**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
-
-*
-
-**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
-
-*
-
-**Điều mình học được từ phần nhóm:**
-
-*
-

@@ -7,8 +7,8 @@
 
 * Tên nhóm:Distro
 * Thành viên: xem `TEAM.md`
-* Candidate problem được chọn (1 câu):
-* Quyết định cuối: Go / Not Yet / No-Go
+* Candidate problem được chọn (1 câu): Trưởng nhóm khó nắm tiến độ và phần còn thiếu của từng thành viên trước milestone vì cập nhật không đều, không thống nhất và bằng chứng công việc nằm rải rác.
+* Quyết định cuối: **Not Yet** — cần kiểm chứng độ tin cậy dữ liệu và chất lượng đầu ra trước pilot.
 
 ***
 
@@ -44,11 +44,15 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: Giảm thời gian và công sức đièu phối công việc của nhóm,đồng thời hạn chế bỏ sót deadline và việc quan trọng.
-├── Opportunity A: Khó tìm được khung giờ làm việc chung
-├── Opportunity B: Khó nắm bắt và tổng hợp thông tin từ nhiều nguồn
-└── Opportunity C: Dễ bỏ sót các yêu cầu từ nhiều kênh
-└── Opportunity D: Khó nhận biết tiến độ thực tế từ nhiều kênh.
+OUTCOME: Trưởng nhóm phát hiện sớm phần việc còn thiếu hoặc bị block trước milestone
+          để kịp điều phối, với ít thời gian hỏi và đối chiếu thủ công hơn.
+├── Opportunity A: Thành viên cập nhật tiến độ không đều hoặc không theo cùng định dạng (#12)
+├── Opportunity B: Trạng thái được báo chưa cho biết phần nào của sản phẩm còn thiếu (#12)
+└── Opportunity C: Deadline và yêu cầu nằm rải rác, khó tổng hợp trước khi hành động (#3, #4)
+
+Solution branches to explore (không phải opportunity):
+├── Mẫu cập nhật + bảng tiến độ chung / Rule kiểm tra trường bắt buộc
+└── AI hỗ trợ nháp tóm tắt nội dung tự do có link nguồn
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
@@ -64,6 +68,16 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 | #3 Gom deadline được thông báo rải rác về một chỗ                     |        4 |            4 |                  3 |              3 |           5 |                                      5 |                4 | **28** |
 | #4 Tổng hợp thông báo, yêu cầu và deadline từ nhiều kênh mỗi ngày     |        4 |            4 |                  3 |              4 |           3 |                                      4 |                3 | **25** |
 
+**Cách đọc điểm:** 1 = yếu/chưa có căn cứ; 3 = trung bình/còn giả định cần kiểm chứng; 5 = rõ hoặc có bằng chứng mạnh trong bối cảnh lab. Điểm là đánh giá tương đối của nhóm, không phải số liệu nghiên cứu.
+
+**Căn cứ chấm shortlist:** #12 có actor và quy trình gần milestone rõ, nhưng bằng chứng ban đầu chủ yếu là tự thuật và một số thời lượng chưa đo nên Pain = 3; #3 có cách làm Rule đơn giản, phạm vi hẹp và dễ thử, nhưng tần suất/tác động chưa rõ nên Impact = 3; #4 có nhu cầu rộng và baseline sơ bộ nhưng nhiều nguồn, nhiều loại thông tin, làm phạm vi và feasibility khó kiểm soát hơn. Điểm 4 thay vì 5 phản ánh phần còn cần kiểm chứng; điểm 3 phản ánh bằng chứng hoặc độ rõ ở mức vừa, không phải đã xác nhận.
+
+| Candidate | Lý do cho điểm theo tiêu chí |
+|---|---|
+| #12 | **Actor 5:** trưởng nhóm và bối cảnh milestone rõ. **Quy trình 4:** có hỏi, chờ, đọc và mở bản nháp nhưng số bước/thời gian còn cần đo. **Pain 3:** snapshots có tình huống cụ thể nhưng mẫu nhỏ. **Impact 4:** phát hiện muộn có thể làm nhóm phải xử lý gấp; baseline chưa đo độc lập. **Vừa sức 4:** giới hạn một nhóm và mẫu cập nhật khả thi, nhưng dữ liệu phân tán là rủi ro. **So sánh 4:** có thể so với bảng + Rule; cần cùng bộ input để so công bằng. **Domain 4:** nhóm có trải nghiệm làm đồ án, chưa đại diện nhiều nhóm. |
+| #3 | **Actor 4:** học viên rõ nhưng người chịu tác động và người quản lý deadline có thể khác nhau. **Quy trình 4:** dò LMS/email/chat cụ thể nhưng tần suất chưa xác minh. **Pain 3:** có thời gian dò sơ bộ, chưa có nhật ký. **Impact 3:** hậu quả lỡ hạn đáng kể nhưng chưa có bằng chứng thường xuyên. **Vừa sức 5:** lịch chung + Rule nhắc hạn dễ thử. **So sánh 5:** No AI/Rule có baseline tự nhiên. **Domain 4:** bối cảnh học tập quen thuộc nhưng cần xác minh với người dùng khác. |
+| #4 | **Actor 4:** dev/PM được nêu nhưng khác vai trò và nguồn. **Quy trình 4:** nguồn và bước tổng hợp tương đối rõ, chưa tách trùng lặp. **Pain 3:** baseline 45 phút/ngày còn ước tính. **Impact 4:** nếu đo đúng thì lặp lại hằng ngày có tác động lớn. **Vừa sức 3:** nhiều nguồn, quyền truy cập và loại thông tin làm scope rộng. **So sánh 4:** có thể đối chứng với inbox/calendar và Rule, nhưng cần thu hẹp nguồn. **Domain 3:** phạm vi dev/PM rộng hơn kinh nghiệm trực tiếp của nhóm. |
+
 **Candidate được chọn (đề xuất theo hướng OST hiện có):**\
 Khi gần đến hạn milestone/báo cáo đồ án, trưởng nhóm muốn nắm được tiến độ thực tế và phần còn thiếu của từng thành viên để điều phối việc hoàn thành đúng hạn.
 
@@ -76,7 +90,7 @@ Candidate #12 khớp trực tiếp với outcome về điều phối công việ
 * **#4 — Tổng hợp thông tin nhiều kênh:** pain có phạm vi rộng nhưng gộp nhiều loại thông tin và nguồn dữ liệu; baseline khoảng 45 phút/ngày còn sơ bộ, có nguy cơ trùng thời gian giữa các hoạt động. Cần thu hẹp phạm vi trước khi chọn.
 * Các candidate khác có bối cảnh hoặc actor riêng, nhưng ít khớp hơn với outcome điều phối công việc nhóm đã ghi trong OST; một số có phương án No AI/Rule rõ hoặc số liệu chưa được xác nhận.
 
-**Xử lý bất đồng (nếu có):**
+**Xử lý bất đồng:** #3 (gom deadline) có tổng điểm bằng #12 và là phương án Rule dễ thử. Nhóm ưu tiên #12 vì khớp opportunity về phần việc còn thiếu trước milestone và có phản biện cụ thể về trạng thái báo cáo so với sản phẩm. Đây là lựa chọn ưu tiên để kiểm chứng, không khẳng định #12 đã được chứng minh tốt hơn; bảng tiến độ + Rule vẫn là baseline so sánh.
 
 ## 3. Kiểm chứng + research giải pháp đã có (CP4)
 
@@ -204,7 +218,10 @@ flowchart TD
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
 | Số bước | 5 | 6 | Thêm 1 bước Rule kiểm tra dữ liệu trước khi đưa cho AI |
-| Tổng thời gian | ~110' (gồm ~45' chờ) | ~15' thao tác của trưởng nhóm + thời gian chờ (đo riêng) | Target chính: rà soát dưới 15'/đợt. Thành viên tốn thêm ~5'/người để điền mẫu (chuyển công, không mất đi) |
+| Thời gian elapsed | ~110' theo ước tính hiện tại, gồm ~45' chờ | Chưa có số đo; thời gian chờ tiếp tục ghi riêng | Không dùng chênh lệch elapsed làm bằng chứng AI tiết kiệm thời gian vì còn phụ thuộc tốc độ phản hồi của thành viên |
+| Thời gian chủ động của trưởng nhóm | ~65' (5' nhắn + 20' đọc/đối chiếu + 30' kiểm tra + 10' tổng hợp) | Mục tiêu ≤15' cho bước AI + kiểm tra + quyết định; nhắc lịch 0' theo giả định quy trình | So sánh công việc cùng actor; baseline 50' chỉ là bước đọc/đối chiếu + kiểm tra, nên cần ghi rõ phạm vi khi báo metric chính |
+| Thời gian chủ động của thành viên | Không đo | Ước tính ~5'/người để điền mẫu | Đây là công phát sinh/chuyển sang thành viên, cần bấm giờ trong pilot |
+| Tổng effort chủ động của cả nhóm | Chưa có baseline đầy đủ | Chưa có target xác nhận; ghi riêng leader + tổng thời gian thành viên | Báo cáo riêng với metric leader để tránh gọi chuyển công là tiết kiệm effort |
 | Số bước thủ công | 5/5 | 3/6 | Thành viên điền mẫu; trưởng nhóm kiểm tra và quyết định |
 | Bottleneck chính | Mở từng bản nháp (~30') | Trưởng nhóm kiểm tra nháp AI (~8') | Bottleneck chấp nhận được vì đây là điểm kiểm soát (HITL) |
 | Rủi ro mới phát sinh | — | AI gán nhầm "hoàn thành", bỏ sót blocker; thành viên điền mẫu qua loa; dữ liệu nhóm đưa vào công cụ AI | Xử lý bằng boundary, bước Rule kiểm tra đủ trường, tiêu chí đánh giá ở mục 7 và ngưỡng dừng ở mục 8 |
@@ -251,7 +268,7 @@ Lý do: “tiến độ thực tế” chưa thể xác định chắc chắn ch
 **Mức đề xuất để kiểm chứng:** Workflow có giới hạn. Đây chưa phải quyết định triển khai: CP4 chưa xác nhận đủ độ tin cậy của dữ liệu, còn CP8 quyết định Not Yet cho tới khi có pilot. Mẫu + Rule là baseline bắt buộc để so sánh.
 
 **Vì sao không chọn mức đơn giản hơn:**
-Candidate #12 là nhu cầu nắm phần còn thiếu trước milestone. CP4 cho thấy thông tin hiện rải rác, nhưng không chứng minh hệ thống có thể tự thu thập hoặc đánh giá đầy đủ từ mọi kênh. Do đó, không giả định AI sẽ quét chat, file hay task board. Trước hết cần thử mẫu cập nhật + Rule; chỉ đưa phần mô tả tự do đã được thành viên chủ động gửi vào AI để tạo nháp có dẫn nguồn nếu baseline chưa đủ. Workflow chỉ đáng chọn nếu pilot chứng minh nó tăng độ chính xác hoặc giảm thời gian rà soát mà không chuyển thêm gánh nặng đáng kể sang thành viên.
+Candidate #12 là nhu cầu nắm phần còn thiếu trước milestone. Mẫu + Rule đủ cho kiểm tra trường bắt buộc, deadline và trạng thái đã chuẩn hóa; chúng chưa tổng hợp được mô tả blocker/phần còn lại viết tự do thành bản tóm tắt có nguồn. Đây là giới hạn cần thử, chưa phải bằng chứng rằng AI tốt hơn. CP4 cũng không chứng minh hệ thống có thể tự thu thập hoặc đánh giá đầy đủ từ mọi kênh, nên không giả định AI sẽ quét chat, file hay task board. Chỉ chuyển từ baseline mẫu + Rule sang Workflow nếu cùng một bộ input cho thấy AI giúp trưởng nhóm rà soát nhanh hơn hoặc ít bỏ sót hơn, không phát sinh lỗi nghiêm trọng và không làm tổng effort của nhóm tăng đáng kể; nếu không, giữ No AI/Rule.
 
 ### 6.3. AI Canvas rút gọn
 
@@ -279,7 +296,7 @@ Bỏ sót blocker là tệ hơn. Nếu AI không phát hiện được phần đ
 | **Quy trình** | Trước mỗi milestone/báo cáo, thành viên gửi mẫu gồm task, trạng thái tự báo, blocker, phần còn lại và link sản phẩm; Rule đánh dấu trường thiếu; nếu đủ dữ liệu, AI có thể nháp tóm tắt có dẫn nguồn; trưởng nhóm mở nguồn, xác nhận và tổng hợp để điều phối. Quy trình không giả định tự động thu thập từ chat, file hay task board. |
 | **Bottleneck** | Thông tin tiến độ nằm rải rác và cập nhật không đều; trưởng nhóm mất thời gian để đối chiếu dữ liệu và xác định phần còn thiếu thực tế |
 | **Impact** | Nhiều task chỉ được phát hiện chậm khi gần deadline; nhóm dễ bỏ sót phần còn thiếu, làm tăng công sức gấp rút và nguy cơ trễ milestone |
-| **Success Metric** (baseline → target, cách đo) | Baseline sơ bộ: khoảng 50 phút/check-in cho bước đọc và đối chiếu (CP5, ước tính; chưa bấm giờ). Mục tiêu thử nghiệm: dưới 15 phút thao tác của trưởng nhóm/check-in, đo bằng nhật ký thời gian qua 4 lần check-in; thời gian chờ và khoảng 5 phút nhập mẫu/người ghi riêng để thấy phần công việc được chuyển sang thành viên. Đồng thời ghi số blocker/task bị phát hiện muộn và lỗi tóm tắt; chưa có kết quả đo nên đây là mục tiêu, không phải kết quả đạt được. |
+| **Success Metric** (baseline → target, cách đo) | Metric chính: thời gian chủ động của trưởng nhóm cho đọc/đối chiếu và kiểm tra tiến độ: baseline ước tính ~50 phút/check-in (bước 3+4; chưa bấm giờ) → mục tiêu ≤15 phút/check-in cho phần AI tạo nháp + trưởng nhóm kiểm tra + quyết định (bước 4–6 quy trình tương lai). Trong 4 check-in liên tiếp, bấm giờ theo từng bước và cùng một phạm vi task; thời gian chờ ghi riêng. Ghi thêm thời gian điền mẫu của thành viên (~5 phút/người hiện chỉ là ước tính), tổng effort chủ động của cả nhóm, số blocker/task bị phát hiện muộn và lỗi tóm tắt. Đây là mục tiêu thử nghiệm, chưa phải kết quả đạt được. |
 | **Boundary** | AI không tự cập nhật trạng thái cho thành viên, không tự phân công lại việc, không suy luận dựa trên thông tin không có trong input |
 | **AI intervention point** | Sau khi thành viên gửi mẫu và Rule kiểm tra đủ trường, trước khi trưởng nhóm đối chiếu nguồn và quyết định điều phối. Nếu thiếu dữ liệu thì dừng ở nhãn “chưa đủ dữ liệu”. |
 | **Mức chọn** | Workflow có giới hạn — giả thuyết cần so với mẫu + Rule; chưa được xác nhận là phù hợp hơn phương án đơn giản. |
@@ -301,8 +318,10 @@ Bỏ sót blocker là tệ hơn. Nếu AI không phát hiện được phần đ
 |---:|---|---|---|
 | 1 | Đúng trạng thái task | Mọi task được AI mô tả đúng với dữ liệu đã có; không gán “hoàn thành” cho task chưa xong | Có task đánh dấu sai trạng thái hoặc bỏ sót task đang thực hiện |
 | 2 | Không bỏ sót blocker | Tất cả blocker quan trọng xuất hiện trong input đều được liệt kê | Có blocker rõ ràng nhưng không được nhắc đến |
-| 3 | Phân biệt rõ phần còn thiếu | AI nêu được ai đang chậm, thiếu gì và cần làm gì tiếp | Tóm tắt chung chung, không xác định người chịu trách nhiệm |
+| 3 | Nêu phần còn thiếu có căn cứ | Khi input có tên người phụ trách và bằng chứng/link, nháp chỉ rõ phần được báo còn thiếu, gắn đúng người và trỏ về nguồn | Gán người/trạng thái không có trong input, suy ra hoàn thành/chậm trễ từ phần trăm hoặc số commit, hoặc không dẫn được nguồn |
 | 4 | Dễ đọc trong 2 phút | Bản tóm tắt ngắn, rõ, có nhấn mạnh rủi ro và mốc quan trọng | Dài dòng, mơ hồ, khó rà soát ngay |
+
+**Bộ eval mẫu:** [10 cặp input / đầu ra tham chiếu, chấm theo 4 tiêu chí](../assets/cp6-eval-cases.md). Đây là fixture tổng hợp để chuẩn bị pilot, không phải output AI đã chạy; điểm đầu ra tham chiếu không được xem là kết quả thực nghiệm.
 
 ***
 
@@ -336,7 +355,7 @@ Workflow phù hợp với chuỗi bước cố định: cung cấp cập nhật 
 
 Sau khi rủi ro Feasibility giảm xuống mức Trung bình hoặc Thấp, thử trong **1 nhóm, 2 tuần, tối thiểu 4 lần check-in**. Trưởng nhóm chọn dữ liệu đầu vào và dùng một mẫu yêu cầu cố định; AI tạo nháp tóm tắt kèm nguồn. Trưởng nhóm kiểm tra trước khi chia sẻ và tự quyết định nhắc việc hoặc điều phối.
 
-Mục tiêu pilot đề xuất: trung vị tổng thời gian **dưới 15 phút/check-in**, nhanh hơn cách tổng hợp bằng bảng chung; không gán hoàn thành sai hoặc bỏ sót blocker quan trọng có trong input. Đây là mục tiêu đánh giá, chưa phải kết quả đạt được. AI không tự gửi tin, sửa trạng thái hoặc phân công lại việc.
+Mục tiêu pilot đề xuất: trung vị thời gian chủ động của trưởng nhóm cho phần rà soát **dưới 15 phút/check-in** và nhanh hơn cách tổng hợp bằng bảng chung; đồng thời báo riêng tổng effort chủ động của thành viên và trưởng nhóm để phát hiện việc chỉ chuyển công sang thành viên. Không chấp nhận gán hoàn thành sai hoặc bỏ sót blocker quan trọng có trong input. Đây là mục tiêu đánh giá, chưa phải kết quả đạt được. AI không tự gửi tin, sửa trạng thái hoặc phân công lại việc.
 
 **Nếu No-Go — nên làm gì thay AI:**
 
@@ -345,7 +364,7 @@ Dùng bảng tiến độ chung, mẫu cập nhật cố định và lịch chec
 **Ngưỡng dừng:**
 
 - Nếu có **1 lần** AI gán nhầm task đã hoàn thành hoặc bỏ sót blocker quan trọng có trong input, tạm dừng dùng bản nháp để điều phối; quay về bảng đã được xác nhận và kiểm tra nguyên nhân trước khi thử lại.
-- Nếu sau **2 tuần và ít nhất 4 check-in**, trung vị tổng thời gian vẫn từ **15 phút trở lên** hoặc không nhanh hơn cách dùng bảng chung, dừng pilot và quay về No AI/Rule.
+- Nếu sau **2 tuần và ít nhất 4 check-in**, trung vị thời gian chủ động của trưởng nhóm cho phần rà soát vẫn từ **15 phút trở lên** hoặc không nhanh hơn cách dùng bảng chung, dừng pilot và quay về No AI/Rule; báo riêng nếu tổng effort nhóm tăng do nhập mẫu.
 - Nếu **2 check-in liên tiếp có trên 20% task thiếu người phụ trách, deadline hoặc cập nhật**, dừng tổng hợp bằng AI để chuẩn hóa dữ liệu; không yêu cầu AI đoán tiến độ.
 - Nếu không thể sử dụng dữ liệu theo thỏa thuận của nhóm hoặc vượt mức chi phí đã thống nhất, dừng đưa dữ liệu vào công cụ và tiếp tục bằng bảng tiến độ chung.
 
