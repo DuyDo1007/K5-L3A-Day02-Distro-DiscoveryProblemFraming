@@ -1,4 +1,4 @@
-# Báo cáo nhóm — Day 02 Discovery & Problem Framing
+﻿# Báo cáo nhóm — Day 02 Discovery & Problem Framing
 
 > Bản chung của nhóm, viết trên repo do nhóm trưởng fork. Không copy file này sang repo cá nhân.
 > Template chi tiết và prompt mẫu: [docs/01-worksheet.md](../../docs/01-worksheet.md). Bài mẫu: [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md).
@@ -269,31 +269,74 @@ Bỏ sót blocker là tệ hơn. Nếu AI không phát hiện được phần đ
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **Trung bình** | Candidate #12 tập trung vào nhu cầu trưởng nhóm nắm phần còn thiếu trước milestone. Workflow có thể giảm công sức đọc và tổng hợp thông tin tự do, nhưng giá trị phụ thuộc vào việc thời gian tiết kiệm có lớn hơn công chuẩn bị dữ liệu và sửa nháp hay không. Pilot cần so sánh với bảng cập nhật tiến độ thông thường. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **Trung bình** | Bản tóm tắt phải chỉ rõ task, người phụ trách, deadline, blocker và nguồn cập nhật. Trưởng nhóm có thể sửa trước khi chia sẻ, nhưng vẫn có nguy cơ tin vào trạng thái AI diễn giải sai. Cần hiển thị “chưa đủ dữ liệu” khi không xác định được và dẫn về nguồn để đối chiếu. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Cao** | Khả năng tổng hợp đúng phụ thuộc vào cập nhật của thành viên và bằng chứng trong task, chat, file. Nếu dữ liệu thiếu hoặc mâu thuẫn, AI không thể xác định chắc chắn tiến độ thực tế. Cần thử trên dữ liệu mẫu đã được người phụ trách xác nhận trước khi dùng đầu ra để điều phối. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Trung bình** | Phạm vi một nhóm và nhập dữ liệu thủ công giúp giới hạn công triển khai. Tuy nhiên, cần thống nhất dữ liệu nào được chia sẻ, công cụ được phép dùng và giới hạn chi phí. Trưởng nhóm phụ trách vận hành, duyệt đầu ra và lưu phản hồi; không cấp quyền tự gửi tin hoặc sửa task cho AI. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** **Not Yet — giữ Workflow là hướng đề xuất, chưa dùng bản tóm tắt AI làm căn cứ điều phối cho đến khi vượt qua kiểm tra dữ liệu và chất lượng đầu ra.**
 
 **Lý do:**
 
-**Nếu Go — pilot nhỏ nhất:**
+Workflow phù hợp với chuỗi bước cố định: cung cấp cập nhật → AI tạo nháp → trưởng nhóm kiểm tra → trưởng nhóm quyết định. Tuy nhiên, rủi ro Feasibility vẫn Cao vì chất lượng đầu ra phụ thuộc trực tiếp vào thông tin thành viên cung cấp. Ưu tiên hiện tại là xác định AI có tổng hợp đúng, không bỏ sót blocker và có tiết kiệm tổng thời gian so với cách làm đơn giản hay không.
 
 **Nếu Not Yet — cần kiểm chứng gì trước:**
 
+- Chuẩn bị mẫu cập nhật gồm task, người phụ trách, deadline, trạng thái, blocker, link bản nháp và thời điểm cập nhật. Với thông tin thiếu hoặc mâu thuẫn, AI phải nêu rõ thay vì tự suy đoán.
+- Chạy thử trên dữ liệu đã được trưởng nhóm và người phụ trách task xác nhận; chấm theo bốn tiêu chí ở mục 7. Mọi kết luận về trạng thái, deadline và blocker phải truy được về input.
+- Đo cùng một phạm vi công việc cho bảng tiến độ thông thường và Workflow: chuẩn bị dữ liệu, tổng hợp, kiểm tra, sửa và xác nhận. Ghi riêng thời gian chờ phản hồi để tránh tính phần AI không xử lý được thành lợi ích của AI.
+- Thống nhất công cụ, quyền sử dụng dữ liệu, người vận hành và mức chi phí trước khi chạy thử.
+
+**Nếu Go — pilot nhỏ nhất:**
+
+Sau khi rủi ro Feasibility giảm xuống mức Trung bình hoặc Thấp, thử trong **1 nhóm, 2 tuần, tối thiểu 4 lần check-in**. Trưởng nhóm chọn dữ liệu đầu vào và dùng một mẫu yêu cầu cố định; AI tạo nháp tóm tắt kèm nguồn. Trưởng nhóm kiểm tra trước khi chia sẻ và tự quyết định nhắc việc hoặc điều phối.
+
+Mục tiêu pilot đề xuất: trung vị tổng thời gian **dưới 15 phút/check-in**, nhanh hơn cách tổng hợp bằng bảng chung; không gán hoàn thành sai hoặc bỏ sót blocker quan trọng có trong input. Đây là mục tiêu đánh giá, chưa phải kết quả đạt được. AI không tự gửi tin, sửa trạng thái hoặc phân công lại việc.
+
 **Nếu No-Go — nên làm gì thay AI:**
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+Dùng bảng tiến độ chung, mẫu cập nhật cố định và lịch check-in; người phụ trách xác nhận task và blocker, trưởng nhóm hỏi trực tiếp khi thông tin chưa rõ. Chọn phương án này nếu đã đạt mục tiêu thời gian, hoặc nếu công chuẩn bị và sửa nháp AI lớn hơn lợi ích đem lại.
+
+**Ngưỡng dừng:**
+
+- Nếu có **1 lần** AI gán nhầm task đã hoàn thành hoặc bỏ sót blocker quan trọng có trong input, tạm dừng dùng bản nháp để điều phối; quay về bảng đã được xác nhận và kiểm tra nguyên nhân trước khi thử lại.
+- Nếu sau **2 tuần và ít nhất 4 check-in**, trung vị tổng thời gian vẫn từ **15 phút trở lên** hoặc không nhanh hơn cách dùng bảng chung, dừng pilot và quay về No AI/Rule.
+- Nếu **2 check-in liên tiếp có trên 20% task thiếu người phụ trách, deadline hoặc cập nhật**, dừng tổng hợp bằng AI để chuẩn hóa dữ liệu; không yêu cầu AI đoán tiến độ.
+- Nếu không thể sử dụng dữ liệu theo thỏa thuận của nhóm hoặc vượt mức chi phí đã thống nhất, dừng đưa dữ liệu vào công cụ và tiếp tục bằng bảng tiến độ chung.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+### 9.1. Hạn chế
+
+- **Phụ thuộc chất lượng cập nhật:** AI chỉ tổng hợp thông tin được cung cấp; không có cập nhật không đồng nghĩa với chưa làm, và có bản nháp không đồng nghĩa với đã hoàn thành.
+- **Trạng thái có thể mơ hồ:** các câu như “gần xong” hoặc “đang xử lý” không đủ để xác nhận tiến độ; cần người phụ trách làm rõ và cung cấp bằng chứng phù hợp.
+- **Không thay thế đánh giá chuyên môn:** bản tóm tắt có thể phản ánh trạng thái báo cáo nhưng không tự bảo đảm chất lượng nội dung, code hoặc sản phẩm của từng task.
+- **Có công vận hành phát sinh:** chọn nguồn, chuẩn bị input và sửa bản nháp có thể làm giảm lợi ích tiết kiệm thời gian, nhất là với nhóm nhỏ hoặc ít task.
+- **Khả năng áp dụng còn giới hạn:** mục tiêu thời gian và ngưỡng đánh giá được đề xuất cho một nhóm đồ án; không mặc định áp dụng nguyên trạng cho nhóm lớn hoặc quy trình khác.
+
+### 9.2. Hướng tiếp theo
+
+| Bước | Hành động | Kết quả mong muốn |
+|---:|---|---|
+| 1 | Thống nhất mẫu cập nhật và cách hiểu các trạng thái task; thêm nguồn, thời điểm cập nhật. | Dữ liệu rõ ràng, phân biệt được hoàn thành, đang làm, bị chặn và chưa đủ thông tin. |
+| 2 | Chuẩn bị các trường hợp mẫu: cập nhật đầy đủ, thiếu dữ liệu, deadline mâu thuẫn, blocker và task chưa có bản nháp. | Bộ mẫu có đáp án do người phụ trách xác nhận để chấm theo tiêu chí mục 7. |
+| 3 | So sánh bảng tiến độ chung với nháp AI, tính cả thời gian chuẩn bị và sửa. | Xác định giá trị bổ sung của Workflow và giảm rủi ro Feasibility trước khi chuyển Go. |
+| 4 | Khi đủ điều kiện, chạy pilot theo phạm vi và ngưỡng dừng ở mục 8. | Có số liệu thời gian, lỗi và phản hồi sau từng check-in để quyết định tiếp tục hoặc quay về No AI/Rule. |
+| 5 | Trưởng nhóm rà soát kết quả cùng các thành viên, cập nhật mẫu yêu cầu và quy tắc kiểm tra. | Giữ cách làm đơn giản nhất đạt mục tiêu; chỉ mở rộng nguồn dữ liệu khi có nhu cầu và quyền sử dụng rõ ràng. |
 
 ## 10. Tài liệu tham khảo
 
--
+Các nguồn phương pháp bên ngoài dưới đây đã được mở kiểm tra ngày **09/11/2026**. Các chỉ tiêu thời gian và ngưỡng dừng trong báo cáo là đề xuất cho bài toán của nhóm, không phải số liệu hiệu quả do những nguồn này công bố.
+
+| Tác giả / tổ chức | Tài liệu | Nội dung tham khảo |
+|---|---|---|
+| Anthropic | [Building effective agents](https://www.anthropic.com/research/building-effective-agents) | Phân biệt Workflow với Agent; ưu tiên giải pháp đơn giản và chỉ tăng độ phức tạp khi cần. |
+| Google PAIR | [People + AI Guidebook — User Needs + Defining Success](https://pair.withgoogle.com/chapter/user-needs/) | Xác định giá trị đối với người dùng, lựa chọn hỗ trợ hay tự động hóa và tiêu chí thành công. |
+| Marty Cagan / SVPG | [The Four Big Risks](https://www.svpg.com/four-big-risks/) | Bốn rủi ro Value, Usability, Feasibility và Viability dùng cho đánh giá và quyết định. |
+| Tài liệu lab | [Worksheet — phần CP6](../../docs/01-worksheet.md) | So sánh No AI/Rule/Workflow/Agent, AI Canvas, tiêu chí đánh giá và quyết định có ngưỡng dừng. |
+| Tài liệu lab | [Framework quốc tế](../../docs/03-international-frameworks.md) | Giải thích và nguồn gốc các framework dùng trong báo cáo. |
+| Tài liệu lab | [Rubric](../../RUBRIC.md) | Yêu cầu về lập luận chọn mức can thiệp, đánh giá rủi ro và quyết định. |
