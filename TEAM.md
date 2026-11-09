@@ -28,8 +28,8 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP3 — Hội tụ nhóm                          | Duy         |              | Cluster, cây OST, bảng chấm điểm               |
 | CP4 — Kiểm chứng                           | Cường       |              | Assumption map, snapshot hoặc survey           |
 | CP4 — Research                             | Cường       |              | Bảng research có link                          |
-| CP5 — Quy trình trước/sau                  | Kiểu        |              | Quy trình + bảng before/after                  |
-| CP5 — Problem Statement v0                 | Kiểu        |              | Problem Statement v0                           |
+| CP5 — Quy trình trước/sau                  | Văn         |              | Quy trình + bảng before/after                  |
+| CP5 — Problem Statement v0                 | Văn         |              | Problem Statement v0                           |
 | CP6 — Mức can thiệp + Problem Statement v1 | Duy         | Dương        | Ma trận, AI Canvas, eval, Problem Statement v1 |
 | CP6 — Quyết định                           | Duong       |              | 4 rủi ro + Go/Not Yet/No-Go                    |
 
@@ -37,23 +37,33 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
-### Đình Văn Kiều-2A202603376
+### Kiều Đình Văn-2A202603376
 
 **Phần việc phụ trách:**
 
-* Xác định quy trình trước/sau, đưa ra problem statement V0
+* Xác định quy trình trước/sau (CP5) và viết Problem Statement v0.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-*
+* Pitch 3 Problem Card ở CP3 (#1 đọc đề lab, #2 hẹn giờ làm việc nhóm, #3 deadline rải rác); đặt câu hỏi phản biện cho 3 card của Dương (#7, #8, #9).
+* Vẽ quy trình hiện tại 5 bước cho candidate #12: mỗi bước có actor, input, output, thời gian; xác định bottleneck là bước mở từng bản nháp kiểm tra (~30'/đợt) và tách riêng thời gian chờ phản hồi (~45') vì AI không rút ngắn được phần này.
+* Vẽ quy trình tương lai 6 bước, ghi rõ bước nào Rule / AI / con người, có bước trưởng nhóm kiểm tra (HITL), boundary và phương án quay về khi AI sai.
+* Lập bảng before/after: ~110 phút/đợt → ~15 phút thao tác của trưởng nhóm, ghi rõ thành viên phải tốn thêm ~5 phút điền mẫu cập nhật.
+* Viết Problem Statement v0 (6 trường) và ghi lại 5 điểm phản biện dẫn tới các thay đổi ở v1.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
-*
+* Mục 4.1, 4.2, 4.3 (quy trình trước/sau, sơ đồ Mermaid, bảng before/after) trong `group_report.md`.
+* Mục 5 (Problem Statement v0 + phản biện) trong `group_report.md`.
+* Mục 2.1 dòng #1–#3 (pitch) và câu hỏi phản biện ở dòng #7–#9.
+* Commit "CP5: thêm quy trình trước/sau và Problem Statement v0" trên nhánh `kieudinhvan_2A202603376`.
 
 **Điều mình học được từ phần nhóm:**
 
-*
+* Bottleneck nên đặt ở bước mà giải pháp thật sự can thiệp được: bước chờ phản hồi dài nhất nhưng AI không giải được, nên phải đo riêng để không thổi phồng lợi ích.
+* Quy trình tương lai chưa đủ nếu chỉ vẽ phần AI làm; phải có bước con người kiểm tra và đường quay về cách làm cũ.
+* Metric chỉ đo tốc độ là chưa đủ: rà soát nhanh mà bỏ sót phần thiếu thì vẫn hỏng, nên v1 phải thêm chỉ số về độ chính xác.
+* Giải pháp có thể chỉ chuyển công từ người này sang người khác (trưởng nhóm đỡ việc, thành viên phải điền mẫu), nên before/after phải ghi cả phần đó.
 
 ### Đào Kiên Cường-2A202603396
 
