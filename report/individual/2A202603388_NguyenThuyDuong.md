@@ -120,9 +120,59 @@ Quy tắc chia theo người, ngày ở hoặc mức sử dụng cần thống n
 
 ### Card muốn pitch nhất
 
-- Card số: **1 — Rà soát hợp đồng thuê nhà trọ** (đề xuất lựa chọn, cần người học xác nhận trước khi pitch).
+- Card số: **1 — Rà soát hợp đồng thuê nhà trọ**
 - Vì sao: Vấn đề có actor và thời điểm rõ: sinh viên mới tốt nghiệp nhận hợp đồng trước khi ký thuê trọ. Việc hiểu thiếu các nghĩa vụ về tiền cọc, chi phí và chấm dứt thuê có thể ảnh hưởng trực tiếp đến tài chính. Có thể thu hẹp phạm vi vào các nhóm điều khoản này để so sánh checklist thủ công với cách hỗ trợ tạo danh sách câu hỏi. So với card ghi chú video, card này tập trung vào một quyết định cụ thể; so với card chia tiền, cần kiểm chứng thêm liệu việc hiểu văn bản có phải phần khó mà công thức cố định không xử lý được. Lựa chọn vẫn phụ thuộc vào khả năng thu thập trải nghiệm thật và hợp đồng được phép sử dụng.
 - Câu hỏi muốn nhóm phản biện: **Nếu đã có checklist về tiền cọc, chi phí, sửa chữa và chấm dứt thuê, phần khó nào vẫn chưa được giải quyết để cần AI? Nhóm sẽ kiểm tra thế nào để bản hỗ trợ không bỏ sót thông tin quan trọng hoặc khiến người thuê quá tin vào kết quả?**
+
+### Bản pitch nhanh
+
+Dùng card này khi trình bày với nhóm. Bản nộp chi tiết dùng bảng Problem Card #1 phía trên.
+
+```text
+┌────────────────────────────────────────────────────┐
+│ PROBLEM CARD #1 — Rà soát hợp đồng thuê trọ          │
+│ Khi nhận hợp đồng, tôi muốn hiểu rõ các nghĩa vụ,    │
+│ để biết điều cần hỏi lại trước khi quyết định thuê. │
+│ Ai chịu ảnh hưởng? Sinh viên mới tốt nghiệp.         │
+│ Quy trình: Nhận → Đọc → Hỏi lại → Quyết định thuê.   │
+│ Bước nghẽn: Hiểu điều khoản (chưa đo riêng số phút). │
+│ Đo thành công: Giảm ít nhất 30% thời gian rà soát,   │
+│ sau khi đo baseline và kiểm tra chất lượng.         │
+│ Cảm nhận nhanh: □ No AI □ Rule ☑ Workflow           │
+│                 □ Agent □ Chưa biết                │
+└────────────────────────────────────────────────────┘
+```
+
+Workflow là nhận định ban đầu, cần so sánh với checklist trước khi chốt.
+
+### Quy trình nháp
+
+```text
+HIỆN TẠI — Tổng thời gian cần xác nhận
+
+[Nhận hợp đồng: chưa đo]
+→ [Đọc ban đầu: 20–30 phút, cần xác nhận]
+→ [Đọc kỹ điều khoản: chưa đo] ← BOTTLENECK giả định
+→ [Hỏi lại điểm chưa rõ: chưa đo]
+→ [Quyết định thuê: chưa đo]
+```
+
+### Prompt phản biện
+
+```text
+Đây là Problem Card của tôi:
+[Dán bảng Problem Card #1 — Rà soát hợp đồng thuê trọ phía trên]
+
+Đóng vai một product manager hoài nghi và phản biện:
+1. Actor có đủ cụ thể không?
+2. Quy trình đã có bằng chứng thực tế chưa?
+3. Bước nghẽn đã được đo thời gian chưa?
+4. Giảm thời gian có làm bỏ sót điều khoản không?
+5. Checklist và người có kinh nghiệm hỗ trợ đã đủ chưa?
+6. Nếu AI giải thích sai, ai kiểm tra và sửa?
+
+Trả lời ngắn, chỉ nói điểm yếu.
+```
 
 ### AI đã phản biện card thế nào
 
@@ -147,3 +197,4 @@ AI biên tập nội dung người dùng cung cấp, chỉnh lăng kính, phản
 - Làm rõ số liệu khác nhau giữa bảng scan và card: chia tiền 30–45 hay 45–60 phút; ghi chú video 60–90 hay 70–90 phút.
 - Đo thời gian từng bước, xác nhận bottleneck và chọn card muốn pitch nhất.
 - Tự bổ sung nhật ký tham gia nhóm và reflection sau khi thực hiện, theo template của đề.
+
