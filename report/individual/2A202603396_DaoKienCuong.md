@@ -156,8 +156,6 @@ HIỆN TẠI — 110 phút/đợt deadline
 | Tôi phản biện pitch của Duy về setup rules cho AI Coding Agent | “Setup rules cho project chỉ làm 1 lần lúc khởi tạo dự án (tần suất rất thấp). Tại sao nhóm không dùng một file template rules mẫu dùng chung mà lại cần build 1 solution riêng?” | Đưa tần suất và phương án template vào tiêu chí cân nhắc, thay vì mặc định cần một sản phẩm mới. |
 | Tôi nhận phản biện từ Dương về CV/JD và candidate tiến độ | Dương hỏi tiêu chí nào tạo ra “% phù hợp” và liệu nhiều từ khóa hơn có thật sự tăng cơ hội phỏng vấn; với candidate tiến độ, Dương hỏi pain là không báo cáo hay chưa hoàn thành và quét file có giải quyết được nếu file không được chia sẻ không. | Tôi ghi nhận “% fit” chưa có căn cứ và chuyển tỷ lệ phỏng vấn thành chỉ số theo dõi, chưa đặt target; nếu giữ điểm phù hợp thì phải có tiêu chí công khai và đối chiếu với bằng chứng CV. Với candidate tiến độ, tôi thu hẹp hướng sang phần việc có bằng chứng/link được chia sẻ và nêu trường hợp thiếu dữ liệu thay vì tự kết luận. Câu hỏi được lưu tại `group_report.md`, mục 2.1; giới hạn shared folder được ghi ở card #3 và problem nhóm được thu hẹp sau CP4. |
 
-Các câu hỏi và nội dung pitch ở trên được đối chiếu với `group_report.md`, mục 2.1. Phần “thay đổi” chỉ mô tả điều được thể hiện trong card và hướng nhóm đã ghi; không xem đây là bằng chứng rằng giả định đã được xác nhận.
-
 ## 5. Dùng AI
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
@@ -172,36 +170,31 @@ Các câu hỏi và nội dung pitch ở trên được đối chiếu với `gr
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-Khi nghe các nhóm trình bày, tôi nhận ra một problem tốt không nhất thiết phải là vấn đề quá lớn hay phức tạp. Những vấn đề nhỏ trong quy trình hằng ngày vẫn có giá trị nếu xảy ra thường xuyên, gây lãng phí thời gian hoặc ảnh hưởng đến kết quả công việc. Tôi cũng học được cách nhìn một vấn đề từ góc độ người trực tiếp thực hiện quy trình, thay vì chỉ nhìn từ góc độ người muốn xây dựng sản phẩm. Điều quan trọng không phải giải pháp nghe hấp dẫn đến đâu, mà là problem có thực sự tồn tại và đủ đáng để giải quyết hay không.
+Khi nghe các nhóm trình bày, tôi nhận ra một problem tốt không nhất thiết phải là vấn đề quá lớn hay phức tạp. Những vấn đề nhỏ trong quy trình hằng ngày vẫn có giá trị nếu xảy ra thường xuyên, gây lãng phí thời gian hoặc ảnh hưởng đến kết quả công việc. Tôi cũng học được cách nhìn một vấn đề từ góc độ người trực tiếp thực hiện quy trình, thay vì chỉ nhìn từ góc độ người muốn xây dựng sản phẩm. Điều quan trọng không phải giải pháp nghe hấp dẫn đến đâu, mà là problem có thực sự tồn tại và đủ đáng để giải quyết hay không
 
 **6.2. Nhóm có lúc nào bị "solution-first" không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
 Tôi nghĩ nhóm có nguy cơ rơi vào solution-first khi bắt đầu thảo luận về việc sử dụng AI để tự động tổng hợp tiến độ, phát hiện blocker và tạo báo cáo cho leader. Khi đó, chúng tôi có thể mặc định rằng AI là giải pháp cần triển khai trước khi chứng minh liệu vấn đề có thực sự cần đến AI hay không.
-
-Nhóm đã cố gắng quay lại phân tích quy trình hiện tại, phỏng vấn người dùng và nghiên cứu các công cụ có sẵn như Trello, Notion, GitHub Projects và Linear. Qua đó, chúng tôi nhận ra một phần vấn đề có thể được giải quyết bằng form cập nhật thống nhất, checklist và rule kiểm tra dữ liệu. AI chỉ thực sự có giá trị khi cần tổng hợp thông tin phi cấu trúc, diễn giải mô tả công việc hoặc hỗ trợ phát hiện blocker từ nội dung người dùng cung cấp.
+Nhóm đã cố gắng quay lại phân tích quy trình hiện tại, phỏng vấn người dùng và nghiên cứu các công cụ có sẵn như Trello, Notion, GitHub Projects và Linear. Qua đó, chúng tôi nhận ra một phần vấn đề có thể được giải quyết bằng form cập nhật thống nhất, checklist và rule kiểm tra dữ liệu. AI chỉ thực sự có giá trị khi cần tổng hợp thông tin phi cấu trúc, diễn giải mô tả công việc hoặc hỗ trợ phát hiện blocker từ nội dung người dùng cung cấp
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
 Có. Một điểm khiến tôi phải xem xét lại là mức độ cần thiết của AI trong giải pháp. Ban đầu, việc sử dụng AI để tổng hợp tiến độ và phát hiện vấn đề có vẻ hợp lý. Tuy nhiên, khi xem xét các công cụ quản lý dự án hiện có và khả năng chuẩn hóa dữ liệu đầu vào, tôi nhận ra rằng nhiều tác vụ như kiểm tra trạng thái, deadline, checklist hay trường thông tin còn thiếu hoàn toàn có thể xử lý bằng rule.
-
-Điều đó khiến tôi thay đổi cách nhìn: không nên mặc định sử dụng AI cho toàn bộ quy trình. Nhóm cần chứng minh phần nào thực sự cần khả năng xử lý ngôn ngữ và tổng hợp của AI, phần nào chỉ cần automation thông thường. Đây cũng là lý do quyết định cuối cùng của nhóm là **Not Yet**, thay vì vội vàng triển khai.
+Điều đó khiến tôi thay đổi cách nhìn: không nên mặc định sử dụng AI cho toàn bộ quy trình. Nhóm cần chứng minh phần nào thực sự cần khả năng xử lý ngôn ngữ và tổng hợp của AI, phần nào chỉ cần automation thông thường. Đây cũng là lý do quyết định cuối cùng của nhóm là **Not Yet**, thay vì vội vàng triển khai
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
 Có. Điều khiến tôi bất ngờ nhất là việc một thành viên đã hoàn thành công việc nhưng chưa push code lên GitHub, trong khi một vấn đề liên quan đến API chỉ được phát hiện khi leader hỏi sát deadline. Điều này cho thấy trạng thái công việc được báo cáo và bằng chứng thực tế về mức độ hoàn thành không phải lúc nào cũng trùng khớp.
-
-Tôi nhận ra rằng nếu hệ thống chỉ dựa vào trạng thái do thành viên tự cập nhật hoặc lịch sử commit thì vẫn có thể đưa ra nhận định sai. Giải pháp cần phân biệt rõ giữa thông tin được báo cáo, bằng chứng đính kèm và những trường hợp chưa đủ dữ liệu để kết luận.
+Tôi nhận ra rằng nếu hệ thống chỉ dựa vào trạng thái do thành viên tự cập nhật hoặc lịch sử commit thì vẫn có thể đưa ra nhận định sai. Giải pháp cần phân biệt rõ giữa thông tin được báo cáo, bằng chứng đính kèm và những trường hợp chưa đủ dữ liệu để kết luận
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
 Khó nhất là xác định đúng ranh giới của vấn đề và diễn đạt nó mà không vô tình đưa giải pháp vào Problem Statement. Ban đầu, rất dễ mô tả vấn đề theo hướng "thiếu một hệ thống AI theo dõi tiến độ", nhưng đó thực chất đã là giả định về giải pháp.
-
-Nhóm phải quay lại xác định ai đang gặp vấn đề, họ gặp vấn đề ở bước nào, nguyên nhân đến từ đâu và hậu quả có thể đo lường bằng metric nào. Ngoài ra, cần phân biệt thời gian leader thực sự bỏ ra để tổng hợp và kiểm tra với thời gian chờ thành viên phản hồi. Nếu không tách bạch, metric baseline và target sẽ thiếu chính xác.
+Nhóm phải quay lại xác định ai đang gặp vấn đề, họ gặp vấn đề ở bước nào, nguyên nhân đến từ đâu và hậu quả có thể đo lường bằng metric nào. Ngoài ra, cần phân biệt thời gian leader thực sự bỏ ra để tổng hợp và kiểm tra với thời gian chờ thành viên phản hồi. Nếu không tách bạch, metric baseline và target sẽ thiếu chính xác
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
 Nếu làm lại, tôi sẽ yêu cầu nhóm xác định rõ phạm vi dữ liệu ngay từ khi thiết kế quy trình tương lai. Cụ thể, cần thống nhất MVP sẽ nhận dữ liệu từ form cập nhật có cấu trúc hay tự động thu thập từ nhiều nguồn như GitHub, chat và file tài liệu. Không nên mô tả quy trình ở một phần là nhập form thủ công, nhưng sang phần giải pháp lại giả định hệ thống có thể tự động truy cập và tổng hợp nhiều nguồn dữ liệu.
-
 Tôi cũng sẽ phản biện mạnh hơn ở ba điểm:
 
 1. **AI có thực sự cần thiết không?** Cần so sánh với phương án form + rule + checklist trước khi chọn Workflow có AI.
