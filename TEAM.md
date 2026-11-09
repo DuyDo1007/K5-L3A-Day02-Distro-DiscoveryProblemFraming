@@ -107,6 +107,31 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 *Khi đánh giá hiệu quả, phải tính cả thời gian chuẩn bị dữ liệu, kiểm tra và sửa đầu ra.
 *Quyết định Not Yet cần đi kèm điều kiện kiểm chứng và ngưỡng dừng rõ ràng; trưởng nhóm vẫn chịu trách nhiệm xác nhận và quyết định điều phối.
 
+### Đỗ Đắc Duy-2A202603604
+
+**Phần việc phụ trách:**
+
+* Điều phối nhóm, ghi chép và xây dựng Problem Statement.
+* Phụ trách CP3 — Hội tụ nhóm và CP6 — Mức can thiệp, Problem Statement v1.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+* Tổng hợp các ý tưởng của nhóm thành cluster, cây OST và bảng chấm điểm để thống nhất candidate problem.
+* Ghi chép và điều phối các nội dung thảo luận của nhóm.
+* Phối hợp với Dương xây dựng ma trận mức can thiệp, AI Canvas, phần đánh giá và Problem Statement v1.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+* Sản phẩm CP3: cluster, cây OST và bảng chấm điểm.
+* Sản phẩm CP6: ma trận mức can thiệp, AI Canvas, phần eval và Problem Statement v1 trong `group_report.md`.
+
+**Điều mình học được từ phần nhóm:**
+
+* Cần hội tụ từ nhiều ý tưởng về một vấn đề cụ thể trước khi bàn sâu về giải pháp.
+* Problem Statement cần dựa trên bằng chứng và được điều chỉnh khi nhóm hiểu rõ hơn về người dùng, quy trình và các giả định.
+* Khi cân nhắc dùng AI, cần xác định rõ mức can thiệp phù hợp và so sánh với cách làm đơn giản hơn.
+* Điều phối và ghi chép giúp nhóm thống nhất quyết định, nhưng cần ghi rõ bằng chứng và việc cần kiểm chứng tiếp theo.
+
 ### HoVaTen-MSSV
 
 **Phần việc phụ trách:**
