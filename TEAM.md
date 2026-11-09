@@ -14,7 +14,7 @@
 | --: | -------------- | ----------- | -------------------------------------------------------------- | ---------------- |
 |   1 | Đỗ Đắc Duy     | 2A202603604 | Trưởng nhóm - ghi chép,viết Problem Statement                  | DuyDo1007        |
 |   2 | Đào Kiên Cường | 2A202603396 | Kiểm chứng và research giải pháp đã có của candidate được chọn | daokiencuong     |
-|   3 | Nguyễn Thùy Dương | 2A202603388 |  Đánh giá rủi ro, đề xuất Go/Not Yet/No-Go; xác định điều kiện thử nghiệm, ngưỡng dừng, hạn chế và hướng tiếp theo  |                  |
+|   3 | Nguyễn Thùy Dương | 2A202603388 |  Đánh giá rủi ro, đề xuất Go/Not Yet/No-Go; xác định điều kiện thử nghiệm, ngưỡng dừng, hạn chế và hướng tiếp theo  |    NTD_DUONG              |
 |   4 |                |             |                                                                |                  |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
