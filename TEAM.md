@@ -10,12 +10,12 @@
 
 ## Thành viên
 
-| STT | Họ và tên      | MSSV        | Vai trò trong nhóm                                             | Tài khoản GitHub |
-| --: | -------------- | ----------- | -------------------------------------------------------------- | ---------------- |
-|   1 | Đỗ Đắc Duy     | 2A202603604 | Trưởng nhóm - ghi chép,viết Problem Statement                  | DuyDo1007        |
-|   2 | Đào Kiên Cường | 2A202603396 | Kiểm chứng và research giải pháp đã có của candidate được chọn | daokiencuong     |
-|   3 | Nguyễn Thùy Dương | 2A202603388 |  Đánh giá rủi ro, đề xuất Go/Not Yet/No-Go; xác định điều kiện thử nghiệm, ngưỡng dừng, hạn chế và hướng tiếp theo  |    NTD_DUONG              |
-|   4 |                |             |                                                                |                  |
+| STT | Họ và tên         | MSSV        | Vai trò trong nhóm                                                                                                | Tài khoản GitHub |
+| --: | ----------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- | ---------------- |
+|   1 | Đỗ Đắc Duy        | 2A202603604 | Trưởng nhóm - ghi chép,viết Problem Statement                                                                     | DuyDo1007        |
+|   2 | Đào Kiên Cường    | 2A202603396 | Kiểm chứng và research giải pháp đã có của candidate được chọn                                                    | daokiencuong     |
+|   3 | Nguyễn Thùy Dương | 2A202603388 | Đánh giá rủi ro, đề xuất Go/Not Yet/No-Go; xác định điều kiện thử nghiệm, ngưỡng dừng, hạn chế và hướng tiếp theo | NTD\_DUONG       |
+|   4 | Đình Văn Kiều     | 2A202603376 | Xác định quy trình trước/sau, đưa ra problem statement V0                                                         | vankd2307        |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -28,20 +28,20 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP3 — Hội tụ nhóm                          | Duy         |              | Cluster, cây OST, bảng chấm điểm               |
 | CP4 — Kiểm chứng                           | Cường       |              | Assumption map, snapshot hoặc survey           |
 | CP4 — Research                             | Cường       |              | Bảng research có link                          |
-| CP5 — Quy trình trước/sau                  |             |              | Quy trình + bảng before/after                  |
-| CP5 — Problem Statement v0                 |             |              | Problem Statement v0                           |
+| CP5 — Quy trình trước/sau                  | Kiểu        |              | Quy trình + bảng before/after                  |
+| CP5 — Problem Statement v0                 | Kiểu        |              | Problem Statement v0                           |
 | CP6 — Mức can thiệp + Problem Statement v1 | Duy         | Dương        | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định                           | Duong          |              | 4 rủi ro + Go/Not Yet/No-Go                    |
+| CP6 — Quyết định                           | Duong       |              | 4 rủi ro + Go/Not Yet/No-Go                    |
 
 ## Cá nhân
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
-### HoVaTen-MSSV
+### Đình Văn Kiều-2A202603376
 
 **Phần việc phụ trách:**
 
-*
+* Xác định quy trình trước/sau, đưa ra problem statement V0
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
@@ -131,3 +131,4 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 * Problem Statement cần dựa trên bằng chứng và được điều chỉnh khi nhóm hiểu rõ hơn về người dùng, quy trình và các giả định.
 * Khi cân nhắc dùng AI, cần xác định rõ mức can thiệp phù hợp và so sánh với cách làm đơn giản hơn.
 * Điều phối và ghi chép giúp nhóm thống nhất quyết định, nhưng cần ghi rõ bằng chứng và việc cần kiểm chứng tiếp theo.
+
