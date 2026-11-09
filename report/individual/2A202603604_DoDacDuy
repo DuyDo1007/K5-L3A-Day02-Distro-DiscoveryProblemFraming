@@ -20,18 +20,15 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
-
+| 1 | Lặp lại · Tốn thời gian | Khi bắt đầu ngày làm việc, tôi muốn biết những thông báo, yêu cầu và deadline quan trọng từ email, Discord và lịch làm việc, để không bỏ sót công việc hoặc phải kiểm tra nhiều nguồn riêng lẻ. | Dev, PM | Ước tính khoảng 15 phút kiểm tra email/ngày; tìm thông tin trên Discord khoảng 2 lần/ngày, mỗi lần khoảng 15 phút. Cần đo thêm để xác nhận tổng thời gian thực tế và tránh tính trùng. |
+| 2 | Tốn thời gian · Pain từ người khác | Khi mới tham gia chương trình hoặc project, tôi muốn hiểu rõ quy trình onboarding, các công việc cần hoàn thành và người phụ trách từng vấn đề, để không mất nhiều thời gian hỏi hoặc tìm kiếm thông tin. | Dev, PM, Reviewer | Ước tính khoảng 30 phút mỗi lần tìm hiểu hoặc hỏi thông tin. Cần xác minh qua người mới tham gia và ghi nhận tần suất onboarding. |
+| 3 | Cần đọc, tổng hợp nhiều thông tin · Tốn thời gian | Khi bắt đầu một task, tôi muốn xác định các quy trình, quy định và tài liệu liên quan trực tiếp đến công việc, để không phải đọc nhiều tài liệu không cần thiết hoặc bỏ sót yêu cầu quan trọng. | Dev, PM, Team | Ước tính khoảng 45 phút mỗi lần bắt đầu công việc. Cần kiểm chứng thời gian dành cho tìm tài liệu, đọc tài liệu và hỏi làm rõ. |
+| 4 | Tốn thời gian · Pain từ người khác | Khi bắt đầu một project sử dụng AI Coding Agent, tôi muốn hiểu những skills, rules và coding convention cần thiết phù hợp với project, để giảm thời gian chuẩn bị và tránh Agent tạo code không đúng yêu cầu. | Dev, Tech Lead, Reviewer | Ước tính hơn 60 phút mỗi lần setup. Cần đo thêm số lần và thời gian phải chỉnh sửa rules hoặc code do Agent làm sai. |
+| 5 | Cần đọc, tổng hợp nhiều thông tin · Pain từ người khác | Khi requirements hoặc thiết kế thay đổi trong quá trình phát triển, tôi muốn biết cụ thể phần nào đã thay đổi và những task nào bị ảnh hưởng, để tránh tiếp tục triển khai theo yêu cầu cũ. | Dev, PM, Reviewer, các thành viên phụ trách task bị ảnh hưởng | Chưa có số liệu về tần suất thay đổi, thời gian xác định ảnh hưởng hoặc số task bị bỏ sót; cần hỏi nhóm và ghi nhận qua một lần thay đổi cụ thể. |
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
--
+-AI gợi ý gộp việc kiểm tra email và tìm thông tin trên Discord thành một vấn đề theo dõi thông tin, công việc và deadline từ nhiều nguồn. Tôi giữ cách gộp này vì hai ý có chung pain là phải kiểm tra nhiều nơi để tránh bỏ sót việc.
+-Tôi giữ riêng vấn đề onboarding và việc đọc tài liệu vì chúng xảy ra ở bối cảnh khác nhau. Ý setup Agent được viết lại theo pain và kết quả mong muốn thay vì chỉ mô tả giải pháp.
 
 ---
 
