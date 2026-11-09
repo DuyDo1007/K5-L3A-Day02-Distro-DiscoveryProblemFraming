@@ -134,36 +134,82 @@ Tổng hợp:
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
 ```text
+HIỆN TẠI — 5 bước, khoảng 110 phút/đợt (trong đó ~45 phút là chờ), 5/5 bước thủ công
 
+[1 Trưởng nhóm nhắn group yêu cầu cập nhật: 5']
+→ [2 Chờ thành viên phản hồi: ~45' (thời gian chờ)]
+→ [3 Đọc cập nhật trong chat + task board, đối chiếu task list: ~20']
+→ [4 Mở từng bản nháp/file kiểm tra phần thực sự đã làm: ~30'] ← BOTTLENECK
+→ [5 Tổng hợp phần còn thiếu, gửi nhắc / điều phối: ~10']
+
+Rà soát tiến độ (bước 3 + 4) = ~50 phút/đợt
+```
+
+```mermaid
+flowchart LR
+    A["1. Trưởng nhóm nhắn yêu cầu cập nhật<br/>5'"] --> B["2. Chờ thành viên phản hồi<br/>~45' (chờ)"]
+    B --> C["3. Đọc chat + task board,<br/>đối chiếu task list<br/>~20'"]
+    C --> D["4. Mở từng bản nháp<br/>kiểm tra phần đã làm<br/>~30' ⚠ BOTTLENECK"]
+    D --> E["5. Tổng hợp phần thiếu,<br/>gửi nhắc / điều phối<br/>~10'"]
+    style D fill:#ffd6d6,stroke:#cc0000
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Trưởng nhóm | Mốc milestone, danh sách task đã phân công | Tin nhắn yêu cầu cập nhật trong group chat | ~5', mỗi đợt check-in trước milestone | Câu hỏi mở ("mọi người làm tới đâu rồi?") nên câu trả lời không theo cùng định dạng |
+| 2 | Thành viên | Tin nhắn yêu cầu | Cập nhật rải rác trong chat (text, link, "gần xong") | ~45' chờ | Thời gian chờ, không phải thời gian làm việc; handoff → trưởng nhóm |
+| 3 | Trưởng nhóm | Tin nhắn cập nhật, task board, task list | Bảng trạng thái sơ bộ theo từng người | ~20' | Phải đọc nhiều nguồn, cách mỗi người báo cáo khác nhau |
+| 4 | Trưởng nhóm | Link bản nháp, file trong thư mục chung | Danh sách phần thực sự còn thiếu + blocker | ~30' | "Đã cập nhật" chưa chắc là "đã làm xong", phải mở từng file để xác nhận |
+| 5 | Trưởng nhóm | Danh sách phần thiếu + blocker | Tin nhắn nhắc việc, phân công bổ sung | ~10' | Handoff → thành viên |
 
-**Bottleneck chính:**
+
+**Bottleneck chính:** Bước 4, mở từng bản nháp để xác nhận phần thực sự đã làm (~30'/đợt). Đây là bước tốn nhiều thời gian thao tác nhất của trưởng nhóm và cần phán đoán: cập nhật "gần xong" hay "đang làm" không cho biết thực tế còn thiếu gì. Bước 2 có thời gian dài hơn (~45') nhưng là thời gian chờ người khác; AI không rút ngắn được nên nhóm đo riêng và xử lý bằng quy ước (mẫu cập nhật + giờ chốt), không tính vào lợi ích của AI.
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
+TƯƠNG LAI — 6 bước, ~15 phút thao tác của trưởng nhóm/đợt (chưa tính thời gian chờ, đo riêng)
 
+[1 Lịch tự nhắc thành viên điền mẫu cập nhật trước giờ check-in: 0']   ← RULE
+→ [2 Thành viên điền mẫu: task, trạng thái, blocker, link bản nháp, thời điểm: ~5'/người]   ← CON NGƯỜI
+→ [3 Kiểm tra mẫu đủ trường; thiếu → đánh dấu "chưa đủ dữ liệu": ~0']   ← RULE
+→ [4 Tạo nháp tóm tắt theo từng thành viên, mỗi kết luận kèm link nguồn: ~2']   ← AI
+→ [5 Trưởng nhóm kiểm tra nháp, chỉ mở bản nháp của task bị gắn cờ rủi ro
+     hoặc "chưa đủ dữ liệu": ~8']   ← CON NGƯỜI (HITL)
+→ [6 Trưởng nhóm quyết định nhắc / phân công và tự gửi: ~5']   ← CON NGƯỜI
+
+BOUNDARY: AI không tự gửi tin, không tự sửa trạng thái task, không tự phân công lại;
+          không suy đoán tiến độ khi thiếu dữ liệu, phải ghi "chưa đủ dữ liệu".
+PHƯƠNG ÁN QUAY VỀ: nháp AI sai trạng thái / bỏ sót blocker / >20% task thiếu dữ liệu
+          → bỏ nháp, trưởng nhóm dùng bảng tiến độ chung và hỏi trực tiếp (cách làm cũ bước 3–4).
+```
+
+```mermaid
+flowchart TD
+    F1["1. [Rule] Lịch tự nhắc điền mẫu cập nhật<br/>0'"] --> F2["2. [Người] Thành viên điền mẫu:<br/>task, trạng thái, blocker, link, thời điểm<br/>~5'/người"]
+    F2 --> F3{"3. [Rule] Mẫu đủ trường?"}
+    F3 -- "Thiếu" --> F3b["Đánh dấu 'chưa đủ dữ liệu'<br/>không đưa cho AI đoán"]
+    F3 -- "Đủ" --> F4["4. [AI] Nháp tóm tắt theo thành viên<br/>kèm link nguồn<br/>~2'"]
+    F3b --> F5
+    F4 --> F5["5. [Người - HITL] Trưởng nhóm kiểm tra nháp,<br/>chỉ mở bản nháp có cờ rủi ro<br/>~8'"]
+    F5 -- "Nháp đúng" --> F6["6. [Người] Trưởng nhóm quyết định<br/>nhắc / phân công, tự gửi<br/>~5'"]
+    F5 -- "AI sai / bỏ sót blocker" --> FB["Phương án quay về:<br/>bảng tiến độ chung + hỏi trực tiếp"]
+    FB --> F6
+    style F5 fill:#d6f0ff,stroke:#0066cc
+    style FB fill:#fff3cd,stroke:#cc9900
 ```
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 5 | 6 | Thêm 1 bước Rule kiểm tra dữ liệu trước khi đưa cho AI |
+| Tổng thời gian | ~110' (gồm ~45' chờ) | ~15' thao tác của trưởng nhóm + thời gian chờ (đo riêng) | Target chính: rà soát dưới 15'/đợt. Thành viên tốn thêm ~5'/người để điền mẫu (chuyển công, không mất đi) |
+| Số bước thủ công | 5/5 | 3/6 | Thành viên điền mẫu; trưởng nhóm kiểm tra và quyết định |
+| Bottleneck chính | Mở từng bản nháp (~30') | Trưởng nhóm kiểm tra nháp AI (~8') | Bottleneck chấp nhận được vì đây là điểm kiểm soát (HITL) |
+| Rủi ro mới phát sinh | — | AI gán nhầm "hoàn thành", bỏ sót blocker; thành viên điền mẫu qua loa; dữ liệu nhóm đưa vào công cụ AI | Xử lý bằng boundary, bước Rule kiểm tra đủ trường, tiêu chí đánh giá ở mục 7 và ngưỡng dừng ở mục 8 |
 
 ---
 
@@ -171,17 +217,20 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Trưởng nhóm đồ án muốn biết tiến độ thực tế của từng thành viên trước mỗi milestone/báo cáo |
+| **Quy trình** | Tổng hợp tiến độ từ nhiều nguồn: nhắn group yêu cầu cập nhật → chờ phản hồi → đọc chat và task board → mở từng bản nháp kiểm tra → tổng hợp phần thiếu và nhắc việc |
+| **Bottleneck** | Bước mở từng bản nháp để xác nhận phần thực sự đã làm (~30'/đợt), cộng với đọc và đối chiếu cập nhật rải rác (~20'/đợt). Cập nhật kiểu "gần xong" không cho biết còn thiếu gì |
+| **Impact** | ~110 phút/đợt cho trưởng nhóm (trong đó ~50 phút rà soát, ~45 phút chờ); phần còn thiếu thường chỉ lộ ra sát deadline, nhóm phải làm gấp |
+| **Success Metric** (baseline → target, cách đo) | Thời gian rà soát tiến độ (bước 3 + 4): baseline ~50 phút/đợt (ước tính 45–60 phút từ báo cáo cá nhân) → target dưới 15 phút/đợt. Cách đo: trưởng nhóm bấm giờ từ lúc bắt đầu đọc cập nhật đến lúc có danh sách phần thiếu, trong 4 đợt check-in liên tiếp; thời gian chờ phản hồi ghi riêng |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI chỉ tóm tắt tiến độ từ dữ liệu được đưa vào; trưởng nhóm kiểm tra bản tóm tắt trước khi dùng để nhắc việc hoặc gửi cho nhóm |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
-
+- **Metric chỉ đo tốc độ, không đo chất lượng**: rà soát nhanh hơn nhưng bỏ sót phần thiếu thì vẫn hỏng. → **Đồng ý.** v1 thêm số task bị phát hiện quá muộn và độ chính xác của bản tóm tắt.
+- **Actor còn mơ hồ**: "trưởng nhóm muốn biết tiến độ" mới là nhu cầu, chưa nói rõ vai trò và quyết định người đó phải đưa ra. → **Đồng ý.** v1 ghi rõ trưởng nhóm / PM nhóm phụ trách điều phối milestone.
+- **Quy trình chưa nêu rõ nguồn dữ liệu**: "nhiều nguồn" là nguồn nào? Không rõ input thì không thiết kế được bước AI. → **Đồng ý.** v1 liệt kê task board, chat, file, meeting, milestone.
+- **Boundary mới nói AI làm gì, chưa nói AI không được làm gì**: AI có được tự cập nhật trạng thái hay tự nhắc thành viên không? → **Đồng ý.** v1 cấm AI tự cập nhật trạng thái, tự phân công, suy luận ngoài input.
+- **Thời gian chờ phản hồi (~45') có nằm trong lợi ích kỳ vọng không?** Nếu có thì đang tính cả phần AI không giải được. → **Đồng ý một phần.** Giữ metric chỉ đo thời gian rà soát; thời gian chờ ghi riêng 
 ---
 
 ## 6. Mức can thiệp AI (CP6)
