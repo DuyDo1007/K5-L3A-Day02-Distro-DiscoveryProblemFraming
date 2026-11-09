@@ -6,7 +6,7 @@
 
 * Tên nhóm: Distro
 * Candidate problem nhóm chọn: Theo dõi tiến độ và phần còn thiếu của thành viên trước milestone
-* Quyết định cuối (Go / Not Yet / No-Go): Go
+* Quyết định cuối (Go / Not Yet / No-Go): Not Yet
 
 ## Thành viên
 
